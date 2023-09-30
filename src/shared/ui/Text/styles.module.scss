@@ -1,0 +1,38 @@
+@import '@/shared/styles/breakpoints.module.scss';
+
+.text {
+  margin: 0;
+  display: inline-block;
+  color: var(--color-white);
+  line-height: 120%; /* 24px */;
+}
+
+.base {
+  font-size: 20px;
+  font-weight: 400;
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    font-size: 18px;
+  }
+}
+
+.button {
+  font-size: 20px;
+  font-weight: 500;
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    font-size: 18px;
+    font-weight: 500;
+  }
+}
+
+.description {
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    font-size: 12px;
+    font-weight: 500;
+  }
+}

@@ -1,0 +1,54 @@
+@import '@/shared/styles/breakpoints.module.scss';
+
+.button {
+  border-radius: 900px;
+  border: none;
+  background: transparent;
+  transition-property: background, border;
+  transition-duration: .2s;
+  cursor: pointer;
+  padding: 18px 42px;
+
+  &.primary {
+    background-color: var(--color-blue);
+
+    &:hover {
+      background-color: var(--color-deep-blue);
+    }
+  }
+
+  &.secondary {
+    &.light {
+      background-color: var(--color-blue-12);
+
+      &:hover {
+        background-color: var(--color-blue-16);
+      }
+
+    }
+  
+    &.dark {
+      border: 1px solid var(--color-white-60);
+      
+      &:hover {
+        border-color: var(--color-white);
+      }
+    }
+  }
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    padding: 12px 32px;
+  }
+}
+
+.text {
+  &.secondary {
+    &.light {
+      color: var(--color-deep-blue);
+    }
+  }
+}
+
+
+
+

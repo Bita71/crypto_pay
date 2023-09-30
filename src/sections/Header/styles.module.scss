@@ -1,12 +1,30 @@
+@import "@/shared/styles/breakpoints.module.scss";
+
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-top: 40px;
   padding-bottom: 40px;
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    padding-top: 44px;
+    padding-bottom: 29px;
+  }
+}
+
+.nav {
+  @media screen and (max-width: $tablet-breakpoint) {
+    display: none;
+  }
 }
 
 .logo {
-  font-size: 4em;
+  font-size: 64px;
   padding-right: 99px;
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    font-size: 46px;
+    padding: 9px 0;
+  }
 }

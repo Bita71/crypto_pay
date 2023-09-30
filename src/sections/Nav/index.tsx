@@ -8,9 +8,15 @@ const links = [
   { title: "How to start" },
 ];
 
-export const Nav = function Nav() {
+interface Props {
+  className?: string,
+}
+
+export const Nav: FC<Props> = function Nav({
+  className
+}) {
   return (
-    <nav>
+    <nav className={className}>
       <ul className={styles.list}>
         {links.map((link) => (
           <li key={link.title}>

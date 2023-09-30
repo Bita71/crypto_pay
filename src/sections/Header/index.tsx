@@ -9,7 +9,7 @@ export const Header = function Header() {
     <header>
       <Container className={styles.header}>
         <LogoIcon className={styles.logo} />
-        <Nav />
+        <Nav className={styles.nav} />
         <Button variant="secondary">
           Get started
         </Button>

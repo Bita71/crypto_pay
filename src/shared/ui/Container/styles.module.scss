@@ -1,6 +1,18 @@
+@import "@/shared/styles/breakpoints.module.scss";
+
 .container {
   padding-left: 200px;
   padding-right: 200px;
   max-width: 1200px;
   margin: 0 auto;
+
+  @media screen and (max-width: $tablet-breakpoint) {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }

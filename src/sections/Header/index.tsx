@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React from "react";
 import { Button, Container } from "@/shared/ui";
 import { LogoIcon } from "@/shared/icons";
 import { Nav } from "../Nav";

@@ -1,12 +1,14 @@
 :root {
   --color-black: #252525;
-  --color-blue: #41A4DF;
-  --color-blue-12: #297EE21F;
-  --color-blue-16: #41A4DF29;
-  --color-deep-blue: #297EE2;
-  --color-white: #FFFFFF;
-  --color-white-60: #FFFFFF99;
-  --color-dark: #0D0D12,
+  --color-blue: #41a4df;
+  --color-blue-12: #297ee21f;
+  --color-blue-16: #41a4df29;
+  --color-deep-blue: #297ee2;
+  --color-white: #ffffff;
+  --color-white-60: #ffffff99;
+  --color-white-80: #ffffffcc;
+  --color-dark: #0d0d12;
+  --color-dark-80: #111111cc;
 }
 
 body {
@@ -14,15 +16,8 @@ body {
   margin: 0;
 }
 
-body.dark {
-  background-color: var(--color-dark);
-}
-
 @media (prefers-color-scheme: dark) {
-  body { 
+  body {
     background-color: var(--color-dark);
-  }
-  body.light {
-    background-color: var(--color-white);
   }
 }

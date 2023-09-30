@@ -14,7 +14,7 @@ export const Nav = function Nav() {
       <ul className={styles.list}>
         {links.map((link) => (
           <li key={link.title}>
-            <Text className={styles.listText} component="span" variant="button">
+            <Text color="dark" component="span" variant="button">
               {link.title}
             </Text>
           </li>

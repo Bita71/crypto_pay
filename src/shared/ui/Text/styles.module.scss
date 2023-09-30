@@ -36,3 +36,31 @@
     font-weight: 500;
   }
 }
+
+.blue {
+  color: var(--color-blue);
+}
+
+.dark {
+  color: var(--color-dark);
+
+  @media (prefers-color-scheme: dark) {
+    color: var(--color-white);
+  }
+}
+
+.white {
+  color: var(--color-white);
+
+  @media (prefers-color-scheme: dark) {
+    color: var(--color-dark);
+  }
+}
+
+.gray {
+  color: var(--color-dark-80);
+
+  @media (prefers-color-scheme: dark) {
+    color: var(--color-dark);
+  }
+}

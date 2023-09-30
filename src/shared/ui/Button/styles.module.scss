@@ -1,14 +1,18 @@
-@import '@/shared/styles/breakpoints.module.scss';
+@import "@/shared/styles/breakpoints.module.scss";
 
 .button {
-  border-radius: 900px;
   border: none;
+  border-radius: 900px;
   background: transparent;
   transition-property: background, border;
-  transition-duration: .2s;
+  transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
   cursor: pointer;
   padding: 18px 42px;
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    padding: 12px 32px;
+  }
 
   &.primary {
     background-color: var(--color-blue);
@@ -22,23 +26,48 @@
     &.light {
       background-color: var(--color-blue-12);
 
+      @media (prefers-color-scheme: dark) {
+        padding: 17px 41px;
+        background-color: transparent;
+        border: 1px solid var(--color-white-60);
+
+        @media screen and (max-width: $mobile-breakpoint) {
+          padding: 11px 31px;
+        }
+      }
+
       &:hover {
         background-color: var(--color-blue-16);
+        
+        @media (prefers-color-scheme: dark) {
+          background-color: transparent;
+          border-color: var(--color-white);
+        }
+      }
+    }
+
+    &.dark {
+      padding: 17px 41px;
+      border: 1px solid var(--color-white-60);
+
+      @media screen and (max-width: $mobile-breakpoint) {
+        padding: 11px 31px;
       }
 
-    }
-  
-    &.dark {
-      border: 1px solid var(--color-white-60);
-      
+      @media (prefers-color-scheme: dark) {
+        background-color: var(--color-blue-12);
+        border: none;
+      }
+
       &:hover {
         border-color: var(--color-white);
+
+        @media (prefers-color-scheme: dark) {
+          background-color: var(--color-blue-16);
+          border: none;
+        }
       }
     }
-  }
-
-  @media screen and (max-width: $mobile-breakpoint) {
-    padding: 12px 32px;
   }
 }
 
@@ -46,10 +75,10 @@
   &.secondary {
     &.light {
       color: var(--color-deep-blue);
+
+      @media (prefers-color-scheme: dark) {
+        color: var(--color-white);
+      }
     }
   }
 }
-
-
-
-

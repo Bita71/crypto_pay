@@ -6,8 +6,23 @@
   --color-deep-blue: #297EE2;
   --color-white: #FFFFFF;
   --color-white-60: #FFFFFF99;
+  --color-dark: #0D0D12,
 }
 
 body {
-  font-family: Inter;
+  background-color: var(--color-white);
+  margin: 0;
+}
+
+body.dark {
+  background-color: var(--color-dark);
+}
+
+@media (prefers-color-scheme: dark) {
+  body { 
+    background-color: var(--color-dark);
+  }
+  body.light {
+    background-color: var(--color-white);
+  }
 }

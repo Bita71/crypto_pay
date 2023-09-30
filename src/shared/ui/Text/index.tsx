@@ -5,7 +5,7 @@ import styles from './styles.module.scss';
 
 const inter = Inter({ subsets: ['latin'] })
 
-interface Props extends HTMLAttributes<HTMLParagraphElement & HTMLSpanElement> {
+interface Props extends HTMLAttributes<HTMLParagraphElement | HTMLSpanElement> {
   variant?: 'base' | 'button' | 'description',
   component?: 'span' | 'p',
 }

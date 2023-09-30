@@ -1,12 +1,12 @@
-import { Button } from '@/shared/ui'
-import styles from './page.module.css'
+import { Header } from "@/sections/Header";
+import { Fragment } from "react";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <Button>
-        кнопка
-      </Button>
-    </main>
-  )
+    <Fragment>
+      <Header />
+      <main>
+      </main>
+    </Fragment>
+  );
 }

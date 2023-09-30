@@ -6,6 +6,7 @@
   background: transparent;
   transition-property: background, border;
   transition-duration: .2s;
+  transition-timing-function: ease-in-out;
   cursor: pointer;
   padding: 18px 42px;
 

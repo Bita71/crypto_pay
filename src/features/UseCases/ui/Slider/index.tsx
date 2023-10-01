@@ -1,12 +1,11 @@
 "use client";
-import React, { FC, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import SwiperCore from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import styles from "./styles.module.scss";
 import classNames from "classnames";
-import { Button, Card, Text } from "@/shared/ui";
-import Image from "next/image";
+import { Button, Text } from "@/shared/ui";
 
 interface Slide {
   blueTitle: string;

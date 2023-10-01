@@ -85,14 +85,15 @@ export const UseCasesSlider = function UseCasesSlider() {
                 <Text
                   className={styles.slideTitle}
                   variant="h2"
+                  isStableColor
                   color="blue"
                   component="h2"
                 >
                   {item.blueTitle}
                   <Text
-                    className={styles.slideTitleWhite}
                     variant="h2"
                     color="white"
+                    isStableColor
                     component="span"
                   >
                     {item.whiteTitle}
@@ -102,6 +103,7 @@ export const UseCasesSlider = function UseCasesSlider() {
                   className={styles.slideDescription}
                   variant="base"
                   component="p"
+                  isStableColor
                   color="white"
                 >
                   {item.description}
@@ -118,7 +120,7 @@ export const UseCasesSlider = function UseCasesSlider() {
         <Text
           variant="description"
           color="white"
-          className={styles.paginationPage}
+          isStableColor
         >
           0{activeSlide + 1}
         </Text>
@@ -134,7 +136,7 @@ export const UseCasesSlider = function UseCasesSlider() {
         <Text
           variant="description"
           color="white"
-          className={styles.paginationPage}
+          isStableColor
         >
           0{slides.length}
         </Text>

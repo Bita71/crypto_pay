@@ -2,7 +2,6 @@ import React, { FC, ReactNode } from 'react';
 import styles from './styles.module.scss';
 import classNames from 'classnames';
 
-
 interface Props {
   children: ReactNode,
   className?: string

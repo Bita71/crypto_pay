@@ -81,12 +81,6 @@
   &Title {
     max-width: 488px;
 
-    &White {
-      :global(body.dark-theme) & {
-        color: var(--color-white);
-      }
-    }
-
     @media screen and (max-width: $tablet-breakpoint) {
       max-width: 600px;
     }
@@ -98,10 +92,6 @@
 
   &Description {
     max-width: 350px;
-
-    :global(body.dark-theme) & {
-      color: var(--color-white);
-    }
   }
 
   &Button {
@@ -125,12 +115,6 @@
     height: auto;
     max-width: 600px;
     width: 100%
-  }
-
-  &Page {
-    :global(body.dark-theme) & {
-      color: var(--color-white);
-    }
   }
 
   &Line {

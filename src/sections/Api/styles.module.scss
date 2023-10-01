@@ -1,0 +1,25 @@
+@import "@/shared/styles/breakpoints.module.scss";
+
+.card {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 32px;
+  padding: 147px 80px;
+  background-image: url('/api.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    background-image: url('/api-mobile.webp');
+    gap: 24px;
+    padding: 291px 32px 28px;
+  }
+}
+
+.description {
+  max-width: 385px;
+}
+
+

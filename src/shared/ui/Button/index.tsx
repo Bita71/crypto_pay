@@ -6,6 +6,7 @@ import { Text } from "../Text";
 interface Props extends HTMLAttributes<HTMLButtonElement> {
   variant?: "primary" | "secondary" | "icon";
   color?: "light" | "dark";
+  isStableColor?: boolean,
 }
 
 export const Button: FC<Props> = function Button({
@@ -13,6 +14,7 @@ export const Button: FC<Props> = function Button({
   variant = "primary",
   children,
   className,
+  isStableColor = false,
   ...props
 }) {
   return (
@@ -21,6 +23,7 @@ export const Button: FC<Props> = function Button({
         styles.button,
         styles[variant],
         styles[color],
+        { [styles.stable]: isStableColor },
         className
       )}
       {...props}
@@ -29,6 +32,7 @@ export const Button: FC<Props> = function Button({
         children
       ) : (
         <Text
+          isStableColor={variant === 'primary' || isStableColor}
           variant="button"
           color='white'
           component="span"

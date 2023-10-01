@@ -19,15 +19,36 @@
   }
 }
 
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.theme {
+  &Icon {
+    font-size: 32px;
+
+    @media screen and (max-width: $mobile-breakpoint) {
+      font-size: 24px;
+    }
+
+    &.light {
+      color: var(--color-dark-80);
+    }
+
+    &.dark {
+      color: var(--color-white-80);
+    }
+  }
+}
+
 .logo {
-  position: relative;
-  width: 64px;
-  height: 64px;
-  margin-right: 99px;
+  font-size: 64px;
+  margin-right: 186px;
 
   @media screen and (max-width: $mobile-breakpoint) {
-    width: 46px;
-    height: 46px;
+    font-size: 46px;
     margin: 0;
   }
 }

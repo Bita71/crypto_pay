@@ -1,17 +1,17 @@
 "use client";
 import React from "react";
 import { DotLottiePlayer } from "@dotlottie/react-player";
-import { Card, Link, Text } from "@/shared/ui";
+import { Card, Link, Text, Theme, useTheme } from "@/shared/ui";
 
 import styles from "./styles.module.scss";
-import { Theme } from "@/shared/hooks";
 
 export const OneClick = function OneClick() {
+  const { theme } = useTheme();
   return (
     <Card className={styles.card}>
       <DotLottiePlayer
         src={
-          document.body.className === Theme.light
+          theme === Theme.light
             ? "/one-click-light.lottie"
             : "/one-click-dark.lottie"
         }

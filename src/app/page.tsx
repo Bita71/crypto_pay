@@ -1,14 +1,14 @@
-import { Fragment } from "react";
 import { Header } from "@/sections/Header";
 import { Hero } from "@/sections/Hero";
 import { UseCases } from "@/sections/UseCases";
 import { Api } from "@/sections/Api";
 import styles from "./page.module.scss";
 import { Features } from "@/sections/Features";
+import { ThemeProvider } from "@/shared/ui";
 
 export default function Home() {
   return (
-    <Fragment>
+    <ThemeProvider>
       <Header />
       <main className={styles.main}>
         <Hero />
@@ -16,6 +16,6 @@ export default function Home() {
         <Features />
         <Api />
       </main>
-    </Fragment>
+    </ThemeProvider>
   );
 }

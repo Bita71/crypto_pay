@@ -2,8 +2,7 @@
 import React from "react";
 import classNames from "classnames";
 import { NavList } from "@/features/Nav";
-import { Button, Container } from "@/shared/ui";
-import { Theme, useTheme } from "@/shared/hooks";
+import { Button, Container, Theme, useTheme } from "@/shared/ui";
 import { LogoIcon, MoonIcon, SunIcon } from "@/shared/icons";
 import styles from "./styles.module.scss";
 

@@ -1,0 +1,11 @@
+@import "@/shared/styles/breakpoints.module.scss";
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    gap: 80px;
+  }
+}

@@ -6,14 +6,14 @@ import styles from './styles.module.scss';
 const inter = Inter({ subsets: ['latin'] })
 
 interface Props extends HTMLAttributes<HTMLParagraphElement | HTMLSpanElement> {
-  variant?: 'base' | 'button' | 'description',
-  component?: 'span' | 'p',
+  variant?:  'h1' | 'h2' | 'h3' | 'h4' | 'base' | 'button' | 'description',
+  component?: 'span' | 'p'| 'h1' | 'h2' | 'h3' | 'h4' ,
   color?: 'blue' | 'dark' | 'white' | 'gray'
 }
 
 export const Text: FC<Props> = function Text({
   variant = 'base',
-  component = 'p',
+  component = 'span',
   color = 'dark',
   className,
   children,

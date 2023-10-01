@@ -8,7 +8,7 @@
   padding-bottom: 40px;
 
   @media screen and (max-width: $mobile-breakpoint) {
-    padding-top: 44px;
+    padding-top: 53px;
     padding-bottom: 29px;
   }
 }
@@ -20,11 +20,14 @@
 }
 
 .logo {
-  font-size: 64px;
-  padding-right: 99px;
+  position: relative;
+  width: 64px;
+  height: 64px;
+  margin-right: 99px;
 
   @media screen and (max-width: $mobile-breakpoint) {
-    font-size: 46px;
-    padding: 9px 0;
+    width: 46px;
+    height: 46px;
+    margin: 0;
   }
 }

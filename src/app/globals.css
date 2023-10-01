@@ -11,13 +11,30 @@
   --color-dark-80: #111111cc;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
 body {
   background-color: var(--color-white);
   margin: 0;
+
+  --color-text-dark: var(--color-dark);
+  --color-text-white: var(--color-white);
+  --color-text-blue: var(--color-blue);
+  --color-text-gray: var(--color-dark-80);
+  --color-text-dark: var(--color-dark);
 }
 
 @media (prefers-color-scheme: dark) {
   body {
     background-color: var(--color-dark);
+
+    --color-text-dark: var(--color-white);
+    --color-text-white: var(--color-dark);
+    --color-text-gray: var(--color-white-80);
   }
 }

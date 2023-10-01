@@ -72,6 +72,10 @@
 }
 
 .text {
+  &.primary {
+    color: var(--color-white);
+  }
+
   &.secondary {
     &.light {
       color: var(--color-deep-blue);

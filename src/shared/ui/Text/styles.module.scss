@@ -4,7 +4,61 @@
   margin: 0;
   display: inline-block;
   color: var(--color-white);
-  line-height: 120%; /* 24px */;
+}
+
+.h1,
+.h2,
+.h3,
+.h4 {
+  font-weight: 629;
+  line-height: 110%; /* 35.2px */
+}
+
+.h1 {
+  font-size: 80px;
+  letter-spacing: -2.4px;
+ 
+  @media screen and (max-width: $mobile-breakpoint) {
+    font-size: 46px;
+    letter-spacing: -1.38px;
+  }
+}
+
+.h2 {
+  font-size: 56px;
+  letter-spacing: -1.68px;
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    font-size: 32px;
+    letter-spacing: -0.96px;
+  }
+}
+
+.h3 {
+  font-size: 42px;
+  letter-spacing: -1.26px;
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    font-size: 28px;
+    letter-spacing: -0.84px;
+  }
+}
+
+.h4 {
+  font-size: 32px;
+  letter-spacing: -0.96px;
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    font-size: 24px;
+    letter-spacing: -0.72px;
+  }
+}
+
+.base,
+.button,
+.description {
+  line-height: 120%;
+
 }
 
 .base {
@@ -22,7 +76,6 @@
 
   @media screen and (max-width: $mobile-breakpoint) {
     font-size: 18px;
-    font-weight: 500;
   }
 }
 
@@ -33,34 +86,21 @@
 
   @media screen and (max-width: $mobile-breakpoint) {
     font-size: 12px;
-    font-weight: 500;
   }
 }
 
 .blue {
-  color: var(--color-blue);
+  color: var(--color-text-blue);
 }
 
 .dark {
-  color: var(--color-dark);
-
-  @media (prefers-color-scheme: dark) {
-    color: var(--color-white);
-  }
+  color: var(--color-text-dark);
 }
 
 .white {
-  color: var(--color-white);
-
-  @media (prefers-color-scheme: dark) {
-    color: var(--color-dark);
-  }
+  color: var(--color-text-white);
 }
 
 .gray {
-  color: var(--color-dark-80);
-
-  @media (prefers-color-scheme: dark) {
-    color: var(--color-dark);
-  }
+  color: var(--color-text-gray);
 }

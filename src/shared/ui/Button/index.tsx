@@ -31,6 +31,7 @@ export const Button: FC<Props>  = function Button({
     >
       <Text 
         variant='button' 
+        color='white'
         component='span' 
         className={classNames(
           styles.text,

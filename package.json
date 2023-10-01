@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@dotlottie/react-player": "^1.6.1",
     "classnames": "^2.3.2",
     "next": "latest",
     "react": "latest",

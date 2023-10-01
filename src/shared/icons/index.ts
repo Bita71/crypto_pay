@@ -1,3 +1,11 @@
 export { LogoIcon } from './Logo';
 export { SunIcon } from './Sun';
 export { MoonIcon } from './Moon';
+export { USDTIcon } from './USDT';
+export { BNBIcon } from './BNB';
+export { BTCIcon } from './BTC';
+export { ETHIcon } from './ETH';
+export { TRXIcon } from './TRX';
+export { LTCIcon } from './LTC';
+export { TONIcon } from './TON';
+export { USDCIcon } from './USDC';

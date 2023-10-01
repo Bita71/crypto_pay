@@ -1,0 +1,18 @@
+.link {
+  text-decoration: none;
+  transition: border-color 0.2s ease-in-out;
+  cursor: pointer;
+  border-bottom: 1px solid transparent;
+
+  & span {
+    transition: color 0.2s ease-in-out;
+  }
+
+  &:hover {
+    border-color: var(--color-deep-blue);
+
+    & span {
+      color: var(--color-deep-blue);
+    }
+  }
+}

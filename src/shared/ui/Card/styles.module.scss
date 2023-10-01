@@ -1,0 +1,14 @@
+@import "@/shared/styles/breakpoints.module.scss";
+
+.card {
+  border-radius: 40px;
+  background-color: var(--color-bg-light);
+
+  :global(body.dark-theme) & {
+    background-color: var(--color-bg-dark);
+  }
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    border-radius: 24px;
+  }
+}

@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import { Button, Container, Text } from "@/shared/ui";
 import styles from "./styles.module.scss";
 
@@ -30,19 +29,19 @@ export const Hero = function Hero() {
             Get started
           </Button>
           <ul className={styles.icons}>
-            {botsImages.map((botImage, index) => (
-              <li key={botImage} className={styles.iconsItem}>
-                <Image src={botImage} alt={`bot image ${index + 1}`} fill />
-              </li>
+            {botsImages.map((botImage) => (
+              <li
+                style={{ backgroundImage: `url(${botImage})` }}
+                key={botImage}
+                className={styles.iconsItem}
+              />
             ))}
           </ul>
           <Text component="p" variant="base">
             Popular bots use Crypto Pay
           </Text>
         </div>
-        <div className={styles.phone}>
-          <Image src="/phone.webp" alt="phone" fill />
-        </div>
+        <div className={styles.phone} />
       </Container>
     </section>
   );

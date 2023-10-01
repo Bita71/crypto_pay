@@ -1,10 +1,10 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import classNames from "classnames";
+import { NavList } from "@/features/Nav";
 import { Button, Container } from "@/shared/ui";
 import { Theme, useTheme } from "@/shared/hooks";
 import { LogoIcon, MoonIcon, SunIcon } from "@/shared/icons";
-import { NavList } from "../NavList";
 import styles from "./styles.module.scss";
 
 export const Header = function Header() {

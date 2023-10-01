@@ -1,0 +1,167 @@
+@import "@/shared/styles/breakpoints.module.scss";
+
+.slider {
+  display: flex;
+  align-items: center;
+  height: 488px;
+  gap: 6.5%;
+
+  @media screen and (max-width: $tablet-breakpoint) {
+    flex-direction: column;
+    gap: 32px;
+    height: auto;
+  }
+}
+
+.swiper {
+  height: 100%;
+  width: 100%;
+}
+
+.slide {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  justify-content: space-between;
+
+  @media screen and (max-width: $tablet-breakpoint) {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 32px;
+    height: 670px;
+  }
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    height: 635px;
+  }
+
+  &Img {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 488px;
+    height: 488px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    @media screen and (max-width: $tablet-breakpoint) {
+      min-width: 335px;
+      height: 335px;
+    }
+  }
+
+  &Info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+
+    @media screen and (max-width: $tablet-breakpoint) {
+      align-items: center;
+      text-align: center;
+      gap: 24px;
+      flex-grow: 1;
+    }
+
+    &Text {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+
+      @media screen and (max-width: $tablet-breakpoint) {
+        align-items: center;
+        text-align: center;
+        gap: 24px;
+      }
+    }
+  }
+
+  &Title {
+    max-width: 488px;
+
+    &White {
+      :global(body.dark-theme) & {
+        color: var(--color-white);
+      }
+    }
+
+    @media screen and (max-width: $tablet-breakpoint) {
+      max-width: 600px;
+    }
+
+    @media screen and (max-width: $mobile-breakpoint) {
+      max-width: 375px;
+    }
+  }
+
+  &Description {
+    max-width: 350px;
+
+    :global(body.dark-theme) & {
+      color: var(--color-white);
+    }
+  }
+
+  &Button {
+    @media screen and (max-width: $tablet-breakpoint) {
+      width: 100%;
+      margin-top: auto;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.pagination {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: 408px;
+  align-items: center;
+
+  @media screen and (max-width: $tablet-breakpoint) {
+    flex-direction: row;
+    height: auto;
+    max-width: 600px;
+    width: 100%
+  }
+
+  &Page {
+    :global(body.dark-theme) & {
+      color: var(--color-white);
+    }
+  }
+
+  &Line {
+    border: none;
+    display: inline-block;
+    padding: 0;
+    background-color: var(--color-white-24);
+    height: 100%;
+    width: 4px;
+    border-radius: 90px;
+    transition-property: background-color opacity;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.2s;
+    cursor: pointer;
+
+    @media screen and (max-width: $tablet-breakpoint) {
+      height: 4px;
+      width: 100%;
+    }
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    &.selected {
+      background-color: var(--color-blue);
+      cursor: default;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}

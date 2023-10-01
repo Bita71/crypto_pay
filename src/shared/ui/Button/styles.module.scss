@@ -1,6 +1,8 @@
 @import "@/shared/styles/breakpoints.module.scss";
 
 .button {
+  align-items: center;
+  justify-content: center;
   display: inline-flex;
   border: none;
   border-radius: 900px;
@@ -86,6 +88,10 @@
 .text {
   &.primary {
     color: var(--color-white);
+
+    :global(body.dark-theme) & {
+      color: var(--color-white);
+    }
   }
 
   &.secondary {

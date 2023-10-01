@@ -90,17 +90,29 @@
 }
 
 .blue {
-  color: var(--color-text-blue);
+  color: var(--color-blue);
 }
 
 .dark {
-  color: var(--color-text-dark);
+  color: var(--color-dark);
+
+  :global(body.dark-theme) & {
+    color: var(--color-white);
+  }
 }
 
 .white {
-  color: var(--color-text-white);
+  color: var(--color-white);
+
+  :global(body.dark-theme) & {
+    color: var(--color-dark);
+  }
 }
 
 .gray {
-  color: var(--color-text-gray);
+  color: var(--color-dark-80);
+
+  :global(body.dark-theme) & {
+    color: var(--color-white-80);
+  }
 }

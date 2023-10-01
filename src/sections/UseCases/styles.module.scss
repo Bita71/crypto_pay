@@ -1,0 +1,19 @@
+@import "@/shared/styles/breakpoints.module.scss";
+
+.section {
+  background-color: var(--color-dark-blue);
+
+  :global(body.dark-theme) & {
+    background-color: var(--color-bg-dark);
+  }
+}
+
+.container {
+  padding-top: 196px;
+  padding-bottom: 196px;
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}

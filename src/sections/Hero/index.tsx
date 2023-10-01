@@ -32,13 +32,7 @@ export const Hero = function Hero() {
           <ul className={styles.icons}>
             {botsImages.map((botImage, index) => (
               <li key={botImage} className={styles.iconsItem}>
-                <Image
-                  className={styles.iconsImg}
-                  src={botImage}
-                  alt={`bot image ${index + 1}`}
-                  fill
-                  objectFit="contain"
-                />
+                <Image src={botImage} alt={`bot image ${index + 1}`} fill />
               </li>
             ))}
           </ul>
@@ -47,7 +41,7 @@ export const Hero = function Hero() {
           </Text>
         </div>
         <div className={styles.phone}>
-          <Image src="/phone.webp" alt="phone" fill objectFit="contain" />
+          <Image src="/phone.webp" alt="phone" fill />
         </div>
       </Container>
     </section>

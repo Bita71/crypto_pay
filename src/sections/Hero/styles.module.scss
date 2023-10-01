@@ -123,8 +123,8 @@
     }
   }
 
-  &Img {
-    border-radius: 50%;
+  & img {
+    object-fit: contain;
   }
 }
 
@@ -135,6 +135,10 @@
   align-items: center;
   position: relative;
   height: 700px;
+
+  & img {
+    object-fit: contain;
+  }
 
   @media screen and (max-width: $tablet-breakpoint) {
     width: 100%;

@@ -10,13 +10,25 @@ export const Api = function Api() {
           <Text isStableColor variant="h2" component="h2" color="white">
             Crypto Pay API
           </Text>
-          <Text isStableColor className={styles.description} variant="base" component="p" color="white">
+          <Text
+            isStableColor
+            className={styles.description}
+            variant="base"
+            component="p"
+            color="white"
+          >
             Explore available methods and types and integrate them in any
             programming language.
           </Text>
-          <Button isStableColor className={styles.button} variant="secondary" color="dark">
-            Open API Docs
-          </Button>
+          <a href="/">
+            <Button
+              isStableColor
+              variant="secondary"
+              color="dark"
+            >
+              Open API Docs
+            </Button>
+          </a>
         </Card>
       </Container>
     </section>

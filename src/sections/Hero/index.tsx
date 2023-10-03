@@ -25,9 +25,9 @@ export const Hero = function Hero() {
             Seamlessly accept crypto payments in your Telegram bots and
             services.
           </Text>
-          <Button className={styles.button} variant="primary">
-            Get started
-          </Button>
+          <a href="/" className={styles.button}>
+            <Button variant="primary">Get started</Button>
+          </a>
           <ul className={styles.icons}>
             {botsImages.map((botImage) => (
               <li

@@ -73,7 +73,7 @@ export const UseCasesSlider = function UseCasesSlider() {
         onSlideChange={handleSlideChange}
         onSwiper={setSwiper}
       >
-        {slides.map((item, index) => (
+        {slides.map((item) => (
           <SwiperSlide key={item.img} className={styles.slide}>
             <div
               style={{ backgroundImage: `url(${item.img})` }}
@@ -108,19 +108,15 @@ export const UseCasesSlider = function UseCasesSlider() {
                   {item.description}
                 </Text>
               </div>
-              <Button className={styles.slideButton} variant="primary">
-                Open API Docs
-              </Button>
+              <a href="/" className={styles.slideButton}>
+                <Button variant="primary">Open API Docs</Button>
+              </a>
             </div>
           </SwiperSlide>
         ))}
       </Swiper>
       <div className={styles.pagination}>
-        <Text
-          variant="description"
-          color="white"
-          isStableColor
-        >
+        <Text variant="description" color="white" isStableColor>
           0{activeSlide + 1}
         </Text>
         {slides.map((slide, index) => (
@@ -132,11 +128,7 @@ export const UseCasesSlider = function UseCasesSlider() {
             })}
           />
         ))}
-        <Text
-          variant="description"
-          color="white"
-          isStableColor
-        >
+        <Text variant="description" color="white" isStableColor>
           0{slides.length}
         </Text>
       </div>

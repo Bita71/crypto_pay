@@ -35,7 +35,7 @@ export const Send: FC<Props> = function Send({ className }) {
         Send coins to users
       </Text>
       <Text variant="base" color="gray" component="p">
-        Automate payouts to users with <Link>transfer</Link> API method
+        Automate payouts to users with <Link href="/">transfer</Link> API method
       </Text>
     </Card>
   );

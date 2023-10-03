@@ -35,7 +35,7 @@ export const OneClick: FC<Props> = function OneClick({ className }) {
         One click to start
       </Text>
       <Text variant="base" color="gray" component="p">
-        Open <Link>@CryptoBot</Link>, go to <Link>Crypto Pay</Link> and tap
+        Open <Link href="/">@CryptoBot</Link>, go to <Link href="/">Crypto Pay</Link> and tap
         Create App to get API Token
       </Text>
     </Card>

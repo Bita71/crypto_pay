@@ -20,8 +20,8 @@ export const PaymentStatistics: FC<Props> = function PaymentStatistics({
         Payment statistics
       </Text>
       <Text variant="base" color="gray" component="p">
-        Open <Link>@CryptoBot</Link>, go to <Link>Crypto Pay</Link> and{" "}
-        <Link>My Apps</Link>, App Name to get Statistics
+        Open <Link href="/">@CryptoBot</Link>, go to <Link href="/">Crypto Pay</Link> and{" "}
+        <Link href="/">My Apps</Link>, App Name to get Statistics
       </Text>
     </Card>
   );

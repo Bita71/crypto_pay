@@ -34,7 +34,9 @@ export const Community = function Community() {
             </li>
           ))}
         </ul>
-        <Button variant="primary">Open Devs chat</Button>
+        <a href="/">
+          <Button variant="primary">Open Devs chat</Button>
+        </a>
       </Container>
     </section>
   );

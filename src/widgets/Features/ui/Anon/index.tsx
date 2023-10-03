@@ -27,7 +27,7 @@ export const Anon: FC<Props> = function Anon({ className }) {
         >
           allow_anonymous
         </Text>{" "}
-        parameter in <Link>createInvoice</Link> method to give use ran option to
+        parameter in <Link href="/">createInvoice</Link> method to give use ran option to
         remain private
       </Text>
     </Card>

@@ -61,7 +61,7 @@ export const Currencies: FC<Props> = function Currencies({ className }) {
         </Text>
         <Text variant="base" color="gray" component="p">
           Bill any supported cryptocurrencies with asset parameter in{" "}
-          <Link>GetInvoice</Link> method
+          <Link href="/">GetInvoice</Link> method
         </Text>
       </div>
       <ul className={styles.currencies}>

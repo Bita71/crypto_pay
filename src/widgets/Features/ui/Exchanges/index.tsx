@@ -35,7 +35,7 @@ export const Exchanges: FC<Props> = function Exchanges({ className }) {
         Real-time exchange rates
       </Text>
       <Text variant="base" color="gray" component="p">
-        Request up to date currency rate with the <Link>getExchangeRates</Link>{" "}
+        Request up to date currency rate with the <Link href="/">getExchangeRates</Link>{" "}
         API method
       </Text>
     </Card>

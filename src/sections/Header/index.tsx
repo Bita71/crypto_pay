@@ -25,7 +25,9 @@ export const Header = function Header() {
               <MoonIcon className={classNames(styles.themeIcon, styles.dark)} />
             )}
           </Button>
-          <Button variant="secondary">Get started</Button>
+          <a href="/">
+            <Button variant="secondary">Get started</Button>
+          </a>
         </div>
       </Container>
     </header>

@@ -16,9 +16,11 @@ export const Footer: FC<Props> = function Footer({ className }) {
         <div className={styles.top}>
           <LogoIcon className={styles.logo} />
           <NavList className={styles.nav} color="white" isStableColor />
-          <Button isStableColor variant="secondary" color="dark">
-            Get started
-          </Button>
+          <a href="/">
+            <Button isStableColor variant="secondary" color="dark">
+              Get started
+            </Button>
+          </a>
         </div>
         <Text variant="button" color="white" isStableColor>
           ©2023 Crypto Bot

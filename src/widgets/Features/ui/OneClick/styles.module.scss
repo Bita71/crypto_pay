@@ -11,14 +11,22 @@
 }
 
 .video {
-  align-self: center;
   width: 100%;
   height: auto;
-  margin-bottom: 24px;
+  margin-left: -6px;
 
   @media screen and (max-width: $tablet-breakpoint) {
     width: 270px;
-    margin-bottom: 0;
+  }
+
+  &Block {
+    align-self: center;
+    margin-bottom: 24px;
+    overflow: hidden;
+
+    @media screen and (max-width: $tablet-breakpoint) {
+      margin-bottom: 0;
+    }
   }
 }
 

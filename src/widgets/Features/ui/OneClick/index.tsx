@@ -14,21 +14,23 @@ export const OneClick: FC<Props> = function OneClick({ className }) {
 
   return (
     <Card className={classNames(styles.card, className)}>
-      <video
-        className={styles.video}
-        key={theme}
-        controls={false}
-        muted
-        autoPlay
-        loop
-      >
-        {theme === Theme.light && (
-          <source src={"/one-click-light.mp4"} type="video/mp4" />
-        )}
-        {theme === Theme.dark && (
-          <source src={"/one-click-dark.mp4"} type="video/mp4" />
-        )}
-      </video>
+      <div className={styles.videoBlock}>
+        <video
+          className={styles.video}
+          key={theme}
+          controls={false}
+          muted
+          autoPlay
+          loop
+        >
+          {theme === Theme.light && (
+            <source src={"/one-click-light.mp4"} type="video/mp4" />
+          )}
+          {theme === Theme.dark && (
+            <source src={"/one-click-dark.mp4"} type="video/mp4" />
+          )}
+        </video>{" "}
+      </div>
       <Text className={styles.title} variant="h3" component="h3">
         One click to start
       </Text>

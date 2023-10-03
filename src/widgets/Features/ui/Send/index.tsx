@@ -14,6 +14,7 @@ export const Send: FC<Props> = function Send({ className }) {
 
   return (
     <Card className={classNames(styles.card, className)}>
+      <div className={styles.videoBlock}>
       <video
         className={styles.video}
         key={theme}
@@ -29,6 +30,7 @@ export const Send: FC<Props> = function Send({ className }) {
           <source src={"/send-dark.mp4"} type="video/mp4" />
         )}
       </video>
+      </div>
       <Text className={styles.title} variant="h3" component="h3">
         Send coins to users
       </Text>

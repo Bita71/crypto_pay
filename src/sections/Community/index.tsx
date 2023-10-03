@@ -25,8 +25,8 @@ export const Community = function Community() {
           </Text>
         </div>
         <ul className={styles.channels}>
-          {channels.map((channel) => (
-            <li className={styles.channelsItem} key={channel.name}>
+          {channels.map((channel, index) => (
+            <li className={styles.channelsItem} key={channel.name + index}>
               <channel.Icon className={styles.channelsIcon} />
               <Text variant="base" color="gray">
                 {channel.name}

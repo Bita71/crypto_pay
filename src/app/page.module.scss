@@ -9,6 +9,10 @@
   border-bottom-left-radius: 40px;
   background-color: var(--color-white);
 
+  :global(body.dark-theme) & {
+    background-color: var(--color-dark);
+  }
+
   @media screen and (max-width: $mobile-breakpoint) {
     gap: 80px;
     border-bottom-right-radius: 24px;

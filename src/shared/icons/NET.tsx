@@ -26,9 +26,9 @@ export const NETIcon: FC<SVGIconContainerProps> = function NETIcon(props) {
           width="112"
           height="112"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -80,8 +80,8 @@ export const NETIcon: FC<SVGIconContainerProps> = function NETIcon(props) {
           y2="96"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#6B3FA0" />
-          <stop offset="1" stop-color="#552D85" />
+          <stop stopColor="#6B3FA0" />
+          <stop offset="1" stopColor="#552D85" />
         </linearGradient>
       </defs>
     </SVGIconContainer>

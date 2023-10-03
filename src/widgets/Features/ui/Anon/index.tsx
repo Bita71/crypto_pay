@@ -23,7 +23,7 @@ export const Anon: FC<Props> = function Anon({ className }) {
           variant="base"
           style={{ fontWeight: "500" }}
           color="gray"
-          component="p"
+          component="span"
         >
           allow_anonymous
         </Text>{" "}

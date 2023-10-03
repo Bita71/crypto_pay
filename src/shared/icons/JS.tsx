@@ -26,9 +26,9 @@ export const JSIcon: FC<SVGIconContainerProps> = function JSIcon(props) {
           width="112"
           height="112"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -80,8 +80,8 @@ export const JSIcon: FC<SVGIconContainerProps> = function JSIcon(props) {
           y2="102.5"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#83CD29" />
-          <stop offset="1" stop-color="#74BE1A" />
+          <stop stopColor="#83CD29" />
+          <stop offset="1" stopColor="#74BE1A" />
         </linearGradient>
       </defs>
     </SVGIconContainer>

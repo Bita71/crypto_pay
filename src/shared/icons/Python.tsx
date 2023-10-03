@@ -32,9 +32,9 @@ export const PythonIcon: FC<SVGIconContainerProps> = function PythonIcon(
           width="112"
           height="112"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -86,8 +86,8 @@ export const PythonIcon: FC<SVGIconContainerProps> = function PythonIcon(
           y2="103.5"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#242429" />
-          <stop offset="1" stop-color="#18181D" />
+          <stop stopColor="#242429" />
+          <stop offset="1" stopColor="#18181D" />
         </linearGradient>
       </defs>
     </SVGIconContainer>

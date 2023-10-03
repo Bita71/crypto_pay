@@ -1,0 +1,42 @@
+@import "@/shared/styles/breakpoints.module.scss";
+
+.footer {
+  background-color: var(--color-dark-blue);
+}
+
+.container {
+  padding-top: 120px;
+  padding-bottom: 40px;
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    padding-top: 56px;
+    padding-bottom: 32px;
+  }
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    padding: 9px 0;
+  }
+}
+
+.nav {
+  @media screen and (max-width: $tablet-breakpoint) {
+    display: none;
+  }
+}
+
+.logo {
+  font-size: 64px;
+  margin-right: 99px;
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    font-size: 46px;
+    margin: 0;
+  }
+}

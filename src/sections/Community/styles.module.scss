@@ -8,15 +8,11 @@
   align-items: center;
   gap: 40px;
   text-align: center;
-  border-bottom-right-radius: 40px;
-  border-bottom-left-radius: 40px;
 
   @media screen and (max-width: $mobile-breakpoint) {
     padding-top: 12px;
     padding-bottom: 40px;
     gap: 24px;
-    border-bottom-right-radius: 24px;
-    border-bottom-left-radius: 24px;
   }
 }
 

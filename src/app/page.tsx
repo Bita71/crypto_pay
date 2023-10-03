@@ -4,6 +4,7 @@ import { UseCases } from "@/sections/UseCases";
 import { Api } from "@/sections/Api";
 import { Features } from "@/sections/Features";
 import { Community } from "@/sections/Community";
+import { Footer } from "@/sections/Footer";
 import { ThemeProvider } from "@/shared/ui";
 import styles from "./page.module.scss";
 
@@ -18,6 +19,7 @@ export default function Home() {
         <Api />
         <Community />
       </main>
+      <Footer className={styles.footer} />
     </ThemeProvider>
   );
 }

@@ -1,11 +1,25 @@
 @import "@/shared/styles/breakpoints.module.scss";
 
 .main {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 120px;
+  border-bottom-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+  background-color: var(--color-white);
 
   @media screen and (max-width: $mobile-breakpoint) {
     gap: 80px;
+    border-bottom-right-radius: 24px;
+    border-bottom-left-radius: 24px;
+  }
+}
+
+.footer {
+  margin-top: -40px;
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    margin-top: -24px;
   }
 }

@@ -1,6 +1,7 @@
 import React, { FC } from "react";
 import { Text } from "@/shared/ui";
 import styles from "./styles.module.scss";
+import classNames from "classnames";
 
 const links = [
   { title: "Use cases" },
@@ -8,12 +9,27 @@ const links = [
   { title: "How to start" },
 ];
 
-export const NavList = function NavList() {
+interface Props {
+  color?: "dark" | "white";
+  isStableColor?: boolean;
+  className?: string;
+}
+
+export const NavList: FC<Props> = function NavList({
+  color = "dark",
+  isStableColor = false,
+  className,
+}) {
   return (
-    <ul className={styles.list}>
+    <ul className={classNames(styles.list, className)}>
       {links.map((link) => (
         <li key={link.title}>
-          <Text color="dark" component="span" variant="button">
+          <Text
+            isStableColor={isStableColor}
+            color={color}
+            component="span"
+            variant="button"
+          >
             {link.title}
           </Text>
         </li>

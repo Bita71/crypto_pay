@@ -9,3 +9,8 @@ export { TRXIcon } from './TRX';
 export { LTCIcon } from './LTC';
 export { TONIcon } from './TON';
 export { USDCIcon } from './USDC';
+export { PHPIcon } from './PHP';
+export { NETIcon } from './NET';
+export { JSIcon } from './JS';
+export { GOIcon } from './GO';
+export { PythonIcon } from './Python';

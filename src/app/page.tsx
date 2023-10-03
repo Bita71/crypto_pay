@@ -2,9 +2,10 @@ import { Header } from "@/sections/Header";
 import { Hero } from "@/sections/Hero";
 import { UseCases } from "@/sections/UseCases";
 import { Api } from "@/sections/Api";
-import styles from "./page.module.scss";
 import { Features } from "@/sections/Features";
+import { Community } from "@/sections/Community";
 import { ThemeProvider } from "@/shared/ui";
+import styles from "./page.module.scss";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <UseCases />
         <Features />
         <Api />
+        <Community />
       </main>
     </ThemeProvider>
   );

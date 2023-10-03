@@ -1,0 +1,63 @@
+@import "@/shared/styles/breakpoints.module.scss";
+
+.container {
+  padding-top: 24px;
+  padding-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  text-align: center;
+  border-bottom-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    padding-top: 12px;
+    padding-bottom: 40px;
+    gap: 24px;
+    border-bottom-right-radius: 24px;
+    border-bottom-left-radius: 24px;
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 24px;
+  max-width: 590px;
+}
+
+.channels {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: flex-start;
+  gap: 24px;
+  max-width: 992px;
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 12px;
+    row-gap: 24px;
+  }
+
+  &Item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+
+    @media screen and (max-width: $mobile-breakpoint) {
+      width: 103px;
+    }
+  }
+
+  &Icon {
+    font-size: 96px;
+  }
+}

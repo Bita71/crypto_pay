@@ -1,0 +1,47 @@
+@import "@/shared/styles/breakpoints.module.scss";
+
+.container {
+  display: grid;
+  grid-template-columns: 4fr 2fr 4fr;
+  gap: 20px;
+
+  @media screen and (max-width: $tablet-breakpoint) {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    gap: 16px;
+  }
+}
+
+.currencies {
+  grid-column: 1 / 4;
+}
+
+.oneClick {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.stat {
+  grid-column: 2 / 4;
+  grid-row: 2 / 4;
+}
+
+.exchanges {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+}
+
+.send {
+  grid-column: 1 / 3;
+  grid-row: 4 / 5;
+}
+
+.anon {
+  grid-column: 3 / 4;
+  grid-row: 4 / 5;
+}
+

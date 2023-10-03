@@ -1,5 +1,4 @@
 @import "@/shared/styles/breakpoints.module.scss";
-
 .card {
   display: flex;
   flex-direction: column;
@@ -11,14 +10,14 @@
 }
 
 .video {
-  align-self: center;
   width: 100%;
   height: auto;
+  align-self: center;
+  border-radius: 32px;
   margin-bottom: 24px;
 
   @media screen and (max-width: $tablet-breakpoint) {
     width: 270px;
-    margin-bottom: 0;
   }
 }
 

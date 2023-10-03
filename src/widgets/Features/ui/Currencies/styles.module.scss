@@ -1,13 +1,34 @@
+@import "@/shared/styles/breakpoints.module.scss";
+
 .card {
+  display: flex;
+  flex-direction: column;
   padding: 42px 56px;
+  gap: 42px;
+
+  @media screen and (max-width: $tablet-breakpoint) {
+    gap: 24px;
+  }
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    padding: 32px;
+  }
 }
 
-.title {
-  margin-bottom: 20px;
-}
+.textBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  order: 1;
 
-.text {
-  margin-bottom: 42px;
+  @media screen and (max-width: $tablet-breakpoint) {
+    margin-bottom: 0;
+    order: 2;
+  }
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    gap: 16px;
+  }
 }
 
 .currencies {
@@ -19,11 +40,25 @@
   gap: 10px;
   justify-content: space-between;
   align-items: flex-start;
+  order: 2;
+
+  @media screen and (max-width: $tablet-breakpoint) {
+    gap: 10px;
+    order: 1;
+    max-width: 270px;
+    align-self: center;
+  }
 
   &Item {
     display: flex;
     align-items: center;
     flex-direction: column;
+
+
+    &:nth-child(n + 5) {
+      transform: translateX(12px);
+    }
+
   }
 
   &Icon {
@@ -33,6 +68,11 @@
     animation-name: currencies-scale;
     animation-duration: 3s;
     animation-iteration-count: infinite;
+
+    @media screen and (max-width: $tablet-breakpoint) {
+      font-size: 56px;
+      margin-bottom: 0;
+    }
   }
 
   &Text {
@@ -40,6 +80,10 @@
     animation-name: currencies-color;
     animation-duration: 3s;
     animation-iteration-count: infinite;
+
+    @media screen and (max-width: $tablet-breakpoint) {
+      display: none;
+    }
   }
 }
 

@@ -5,7 +5,7 @@ export const BNBIcon: FC<SVGIconContainerProps> = function BNBIcon(props) {
   return (
     <SVGIconContainer height={96} width={96} {...props}>
       <title>BNB</title>
-      <g clip-path="url(#clip0_955_5638)">
+      <g clipPath="url(#clip0_955_5638)">
         <mask
           id="mask0_955_5638"
           style={{ maskType: "luminance" }}

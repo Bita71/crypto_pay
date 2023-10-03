@@ -3,7 +3,7 @@
 .card {
   display: flex;
   flex-direction: column;
-  padding: 42px 56px;
+  padding: 42px;
 
   @media screen and (max-width: $mobile-breakpoint) {
     padding: 32px;
@@ -14,11 +14,12 @@
   align-self: center;
   width: 100%;
   height: auto;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
+  border-radius: 32px;
 
   @media screen and (max-width: $tablet-breakpoint) {
-    width: 270px;
-    margin-bottom: 0;
+   margin-bottom: 24px;
+   width: 270px;
   }
 }
 
@@ -29,3 +30,4 @@
     margin-bottom: 16px;
   }
 }
+

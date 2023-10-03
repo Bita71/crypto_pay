@@ -40,7 +40,6 @@ const slides = [
 
 export const UseCasesSlider = function UseCasesSlider() {
   const [width, setWidth] = useState(1600);
-  console.log("🚀 ~ file: index.tsx:46 ~ UseCasesSlider ~ width:", width);
   const [swiper, setSwiper] = useState<SwiperCore | null>(null);
   const [activeSlide, setActiveSlide] = useState(0);
 

@@ -9,7 +9,7 @@ interface Props {
   className?: string;
 }
 
-export const OneClick: FC<Props> = function OneClick({ className }) {
+export const Send: FC<Props> = function Send({ className }) {
   const { theme } = useTheme();
 
   return (
@@ -23,18 +23,17 @@ export const OneClick: FC<Props> = function OneClick({ className }) {
         loop
       >
         {theme === Theme.light && (
-          <source src={"/one-click-light.mp4"} type="video/mp4" />
+          <source src={"/send-light.mp4"} type="video/mp4" />
         )}
         {theme === Theme.dark && (
-          <source src={"/one-click-dark.mp4"} type="video/mp4" />
+          <source src={"/send-dark.mp4"} type="video/mp4" />
         )}
       </video>
       <Text className={styles.title} variant="h3" component="h3">
-        One click to start
+        Send coins to users
       </Text>
       <Text variant="base" color="gray" component="p">
-        Open <Link>@CryptoBot</Link>, go to <Link>Crypto Pay</Link> and tap
-        Create App to get API Token
+        Automate payouts to users with <Link>transfer</Link> API method
       </Text>
     </Card>
   );

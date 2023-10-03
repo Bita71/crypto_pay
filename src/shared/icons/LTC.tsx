@@ -5,7 +5,7 @@ export const LTCIcon: FC<SVGIconContainerProps> = function LTCIcon(props) {
   return (
     <SVGIconContainer height={96} width={96} {...props}>
       <title>LTC</title>
-      <g clip-path="url(#clip0_955_3996)">
+      <g clipPath="url(#clip0_955_3996)">
         <path
           d="M48.5714 90.8049C72.2119 90.8049 91.3763 71.6405 91.3763 48C91.3763 24.3596 72.2119 5.19519 48.5714 5.19519C24.931 5.19519 5.7666 24.3596 5.7666 48C5.7666 71.6405 24.931 90.8049 48.5714 90.8049Z"
           fill="white"

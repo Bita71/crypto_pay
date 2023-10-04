@@ -1,0 +1,169 @@
+@import "@/shared/styles/breakpoints.module.scss";
+
+.section {
+  background-color: var(--color-bg-light);
+
+
+  :global(body.dark-theme) & {
+    background-color: var(--color-bg-dark);
+  }
+}
+
+.container {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    gap: 24px;
+  }
+}
+
+.title {
+  text-align: center;
+}
+
+.steps {
+  width: 100%;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  flex-direction: column;
+  gap: 40px;
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    gap: 24px;
+    align-items: center;
+  }
+
+  &Item {
+    align-items: center;
+    display: flex;
+    gap: 122px;
+    justify-content: space-between;
+
+    @media screen and (max-width: $tablet-breakpoint) {
+      flex-direction: column-reverse;
+      justify-content: flex-start;
+      gap: 24px;
+      max-width: 335px;
+    }
+
+    @media screen and (max-width: $mobile-breakpoint) {
+      gap: 16px;
+    }
+
+    &.reverse {
+      flex-direction: row-reverse;
+
+      @media screen and (max-width: $tablet-breakpoint) {
+        flex-direction: column-reverse;
+      }
+    }
+  }
+
+  &Number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: linear-gradient(220deg, #010417 10.26%, #2b333f 84.25%),
+      linear-gradient(46deg, #000 15.89%, #434343 171.16%);
+
+    :global(body.dark-theme) & {
+      background: var(--color-white);
+    }
+
+    @media screen and (max-width: $mobile-breakpoint) {
+      height: 36px;
+      min-width: 36px;
+      width: 36px;
+      font-size: 24px;
+      letter-spacing: -0.72px;
+    }
+  }
+
+  &Content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @media screen and (max-width: $mobile-breakpoint) {
+      gap: 16px;
+    }
+  }
+
+  &Info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @media screen and (max-width: $tablet-breakpoint) {
+      flex-direction: row;
+    }
+
+    @media screen and (max-width: $mobile-breakpoint) {
+      gap: 16px;
+    }
+  }
+
+  &Img {
+    width: 590px;
+    height: 488px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media screen and (max-width: $mobile-breakpoint) {
+      width: 335px;
+      height: 277px;
+    }
+  }
+}
+
+.authSteps {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.apiSteps {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  &Item {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &Circle {
+    display: block;
+    min-width: 6px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    margin: 10px 8px 0 8px;
+    background-color: var(--color-blue);
+
+    @media screen and (max-width: $mobile-breakpoint) {
+      min-width: 4px;
+      width: 4px;
+      height: 4px;
+      margin: 10px 6px 0 6px;
+    }
+  }
+}

@@ -26,18 +26,11 @@ export const ThemeContext = createContext<ThemeContextProps>({
 interface ThemeProviderProps {
   children: ReactNode;
 }
-
+const fallbackTheme = localStorage.getItem(key) as Theme;
 export const ThemeProvider = (props: ThemeProviderProps) => {
   const { children } = props;
 
-  const [theme, setTheme] = useState<Theme>(Theme.light);
-
-  useEffect(() => {
-    const fallbackTheme = localStorage.getItem(key) as Theme;
-    if (fallbackTheme) {
-      setTheme(fallbackTheme);
-    }
-  }, []);
+  const [theme, setTheme] = useState<Theme>(fallbackTheme || Theme.light);
 
   useEffect(() => {
     document.body.className = theme;

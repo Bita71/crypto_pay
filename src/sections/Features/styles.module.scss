@@ -4,15 +4,18 @@
   display: grid;
   grid-template-columns: 4fr 2fr 4fr;
   gap: 20px;
+  padding-top: 24px;
+  padding-bottom: 24px;
 
   @media screen and (max-width: $tablet-breakpoint) {
     display: flex;
     flex-direction: column;
   }
 
-
   @media screen and (max-width: $mobile-breakpoint) {
     gap: 16px;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }
 
@@ -44,4 +47,3 @@
   grid-column: 3 / 4;
   grid-row: 4 / 5;
 }
-

@@ -24,10 +24,10 @@ export const Send: FC<Props> = function Send({ className }) {
         loop
       >
         {theme === Theme.light && (
-          <source src={"/send-light.mp4"} type="video/mp4" />
+          <source src={"/movies/send-light.mp4"} type="video/mp4" />
         )}
         {theme === Theme.dark && (
-          <source src={"/send-dark.mp4"} type="video/mp4" />
+          <source src={"/movies/send-dark.mp4"} type="video/mp4" />
         )}
       </video>
       </div>

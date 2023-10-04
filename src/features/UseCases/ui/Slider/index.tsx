@@ -21,20 +21,20 @@ const slides = [
     whiteTitle: "Boost conversion",
     description:
       "Immediately deliver digital products and services to your users.",
-    img: "/case-1.webp",
+    img: "/images/case-1.webp",
   },
   {
     blueTitle: "Channels integration: ",
     whiteTitle: "Seamless access",
     description: "Automatically unlock exclusive content to your users.",
-    img: "/case-2.webp",
+    img: "/images/case-2.webp",
   },
   {
     blueTitle: "Endless customization: ",
     whiteTitle: "with Webhooks",
     description:
       "Receive successful payment notifications in real-time. Integrate to any scenario of your service.",
-    img: "/case-3.webp",
+    img: "/images/case-3.webp",
   },
 ];
 

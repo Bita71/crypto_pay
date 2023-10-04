@@ -50,7 +50,7 @@ export const QuickStart = function QuickStart() {
             </div>
             <div
               className={styles.stepsImg}
-              style={{ backgroundImage: "url(/quick-1.webp)" }}
+              style={{ backgroundImage: "url(/images/quick-1.webp)" }}
             />
           </li>
           <li className={classNames(styles.stepsItem, styles.reverse)}>
@@ -94,7 +94,7 @@ export const QuickStart = function QuickStart() {
             </div>
             <div
               className={styles.stepsImg}
-              style={{ backgroundImage: "url(/quick-2.webp)" }}
+              style={{ backgroundImage: "url(/images/quick-2.webp)" }}
             />
           </li>
           <li className={styles.stepsItem}>
@@ -134,7 +134,7 @@ export const QuickStart = function QuickStart() {
             </div>
             <div
               className={styles.stepsImg}
-              style={{ backgroundImage: "url(/quick-3.webp)" }}
+              style={{ backgroundImage: "url(/images/quick-3.webp)" }}
             />
           </li>
         </ul>

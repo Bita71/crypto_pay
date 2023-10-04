@@ -24,10 +24,10 @@ export const Exchanges: FC<Props> = function Exchanges({ className }) {
           loop
         >
           {theme === Theme.light && (
-            <source src={"/exchange-light.mp4"} type="video/mp4" />
+            <source src={"/movies/exchange-light.mp4"} type="video/mp4" />
           )}
           {theme === Theme.dark && (
-            <source src={"/exchange-dark.mp4"} type="video/mp4" />
+            <source src={"/movies/exchange-dark.mp4"} type="video/mp4" />
           )}
         </video>
       </div>

@@ -24,10 +24,10 @@ export const OneClick: FC<Props> = function OneClick({ className }) {
           loop
         >
           {theme === Theme.light && (
-            <source src={"/one-click-light.mp4"} type="video/mp4" />
+            <source src={"/movies/one-click-light.mp4"} type="video/mp4" />
           )}
           {theme === Theme.dark && (
-            <source src={"/one-click-dark.mp4"} type="video/mp4" />
+            <source src={"/movies/one-click-dark.mp4"} type="video/mp4" />
           )}
         </video>{" "}
       </div>

@@ -14,7 +14,7 @@ export const PaymentStatistics: FC<Props> = function PaymentStatistics({
   return (
     <Card className={classNames(styles.card, className)}>
       <video controls={false} muted autoPlay className={styles.video} loop>
-        <source src="/Stats.mp4" type="video/mp4" />
+        <source src="/movies/Stats.mp4" type="video/mp4" />
       </video>
       <Text className={styles.title} variant="h3" component="h4">
         Payment statistics

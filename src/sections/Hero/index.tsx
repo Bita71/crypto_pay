@@ -4,11 +4,11 @@ import { Button, Container, Text } from "@/shared/ui";
 import styles from "./styles.module.scss";
 
 const botsImages = [
-  "/bot-1.webp",
-  "/bot-2.webp",
-  "/bot-3.webp",
-  "/bot-4.webp",
-  "/bot-5.webp",
+  "/images/bot-1.webp",
+  "/images/bot-2.webp",
+  "/images/bot-3.webp",
+  "/images/bot-4.webp",
+  "/images/bot-5.webp",
 ];
 
 export const Hero = function Hero() {

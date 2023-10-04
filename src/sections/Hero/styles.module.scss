@@ -139,13 +139,13 @@
   align-items: center;
   position: relative;
   height: 700px;
-  background-image: url("/phone.webp");
+  background-image: url("/images/phone.webp");
   background-position: center;
   background-size: 337px;
   background-repeat: no-repeat;
 
   :global(body.dark-theme) & {
-    background-image: url("/phone-dark.webp");
+    background-image: url("/images/phone-dark.webp");
   }
 
   @media screen and (max-width: $tablet-breakpoint) {

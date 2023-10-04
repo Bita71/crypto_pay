@@ -12,7 +12,7 @@ export const Anon: FC<Props> = function Anon({ className }) {
   return (
     <Card className={classNames(styles.card, className)}>
       <video className={styles.video} controls={false} muted autoPlay loop>
-        <source src={"/anon.mp4"} type="video/mp4" />
+        <source src={"/movies/anon.mp4"} type="video/mp4" />
       </video>
       <Text className={styles.title} variant="h3" component="h3">
         Anonymous payments

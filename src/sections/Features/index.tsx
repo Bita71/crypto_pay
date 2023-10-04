@@ -13,7 +13,7 @@ import {
 
 export const Features = function Features() {
   return (
-    <section>
+    <section id="features">
       <Container className={styles.container}>
         <Currencies className={styles.currencies} />
         <OneClick className={styles.oneClick} />

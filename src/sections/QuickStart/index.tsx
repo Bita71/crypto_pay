@@ -3,47 +3,9 @@ import { Container, Link, Text } from "@/shared/ui";
 import styles from "./styles.module.scss";
 import classNames from "classnames";
 
-const steps = [
-  {
-    title: "Authorizing your app",
-    subSteps: [
-      { text: "Open ", link: "/", linkText: "@CryptoBot" },
-      { text: "Go to ", link: "/", linkText: "Crypto Pay" },
-      { text: "Tap ", link: "/", linkText: "Create App" },
-      { text: "Get ", link: "/", linkText: "API Token" },
-    ],
-    subStepsType: "number",
-    img: "/quick-1.webp",
-  },
-  {
-    title: "Crypto Pay API Request",
-    text: "Requests are only served over HTTPS. To pass parameters use:",
-    subSteps: [
-      { link: "/", linkText: "URL query string" },
-      { link: "/", linkText: "application/json " },
-      { link: "/", linkText: "application/x-www-form-urlencoded" },
-      { link: "/", linkText: "multipart/form-data" },
-    ],
-    subStepsType: "circle",
-    img: "/quick-2.webp",
-  },
-  {
-    title: "Getting updates",
-    text: "There are two ways of receiving updates for your app:",
-    subSteps: [
-      { link: "/", linkText: "" },
-      { link: "/", linkText: "" },
-      { link: "/", linkText: "" },
-      { link: "/", linkText: "" },
-    ],
-    subStepsType: "circle",
-    img: "/quick-3.webp",
-  },
-];
-
 export const QuickStart = function QuickStart() {
   return (
-    <section className={styles.section}>
+    <section id="start" className={styles.section}>
       <Container className={styles.container}>
         <Text className={styles.title} variant="h2" component="h2">
           Quick start using{" "}

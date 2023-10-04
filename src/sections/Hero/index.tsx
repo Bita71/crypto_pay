@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import { Button, Container, Text } from "@/shared/ui";
 import styles from "./styles.module.scss";
@@ -11,6 +12,17 @@ const botsImages = [
 ];
 
 export const Hero = function Hero() {
+  const handleClick = () => {
+    const element = document.getElementById("start");
+    if (!element) {
+      return;
+    }
+    element.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "start",
+    });
+  };
   return (
     <section>
       <Container className={styles.hero}>
@@ -25,9 +37,13 @@ export const Hero = function Hero() {
             Seamlessly accept crypto payments in your Telegram bots and
             services.
           </Text>
-          <a href="/" className={styles.button}>
-            <Button variant="primary">Get started</Button>
-          </a>
+          <Button
+            onClick={handleClick}
+            className={styles.button}
+            variant="primary"
+          >
+            Get started
+          </Button>
           <ul className={styles.icons}>
             {botsImages.map((botImage) => (
               <li

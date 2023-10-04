@@ -1,3 +1,4 @@
+"use client";
 import React, { FC } from "react";
 import { NavList } from "@/features/Nav";
 import { Button, Container, Text } from "@/shared/ui";
@@ -10,17 +11,31 @@ interface Props {
 }
 
 export const Footer: FC<Props> = function Footer({ className }) {
+  const handleClick = () => {
+    const element = document.getElementById("start");
+    if (!element) {
+      return;
+    }
+    element.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "start",
+    });
+  };
   return (
     <footer className={classNames(styles.footer, className)}>
       <Container className={styles.container}>
         <div className={styles.top}>
           <LogoIcon className={styles.logo} />
           <NavList className={styles.nav} color="white" isStableColor />
-          <a href="/">
-            <Button isStableColor variant="secondary" color="dark">
-              Get started
-            </Button>
-          </a>
+          <Button
+            onClick={handleClick}
+            isStableColor
+            variant="secondary"
+            color="dark"
+          >
+            Get started
+          </Button>
         </div>
         <Text variant="button" color="white" isStableColor>
           ©2023 Crypto Bot

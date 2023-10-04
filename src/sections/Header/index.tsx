@@ -9,6 +9,17 @@ import styles from "./styles.module.scss";
 export const Header = function Header() {
   const { theme, toggleTheme } = useTheme();
 
+  const handleClick = () => {
+    const element = document.getElementById("start");
+    if (!element) {
+      return;
+    }
+    element.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "start",
+    });
+  };
   return (
     <header>
       <Container className={styles.header}>
@@ -25,9 +36,9 @@ export const Header = function Header() {
               <MoonIcon className={classNames(styles.themeIcon, styles.dark)} />
             )}
           </Button>
-          <a href="/">
-            <Button variant="secondary">Get started</Button>
-          </a>
+          <Button onClick={handleClick} variant="secondary">
+            Get started
+          </Button>
         </div>
       </Container>
     </header>

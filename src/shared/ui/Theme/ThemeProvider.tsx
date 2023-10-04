@@ -26,16 +26,27 @@ export const ThemeContext = createContext<ThemeContextProps>({
 interface ThemeProviderProps {
   children: ReactNode;
 }
-const fallbackTheme = localStorage.getItem(key) as Theme;
+
 export const ThemeProvider = (props: ThemeProviderProps) => {
   const { children } = props;
 
-  const [theme, setTheme] = useState<Theme>(fallbackTheme || Theme.light);
+  const [theme, setTheme] = useState<Theme>(Theme.light);
+  const [isInited, setIsInited] = useState(false);
 
   useEffect(() => {
-    document.body.className = theme;
-    localStorage.setItem(key, theme);
-  }, [theme]);
+    const fallbackTheme = localStorage.getItem(key) as Theme;
+    if (fallbackTheme) {
+      setTheme(fallbackTheme);
+    }
+    setIsInited(true);
+  }, []);
+
+  useEffect(() => {
+    if (isInited) {
+      document.body.className = theme;
+      localStorage.setItem(key, theme);
+    }
+  }, [isInited, theme]);
 
   const defaultProps = useMemo(
     () => ({

@@ -51,11 +51,11 @@
       flex-direction: column-reverse;
       justify-content: flex-start;
       gap: 24px;
-      max-width: 335px;
     }
 
     @media screen and (max-width: $mobile-breakpoint) {
       gap: 16px;
+      max-width: 335px;
     }
 
     &.reverse {

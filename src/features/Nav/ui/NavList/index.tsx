@@ -1,4 +1,3 @@
-'use client'
 import React, { FC, MouseEvent } from "react";
 import { Button, Text } from "@/shared/ui";
 import styles from "./styles.module.scss";

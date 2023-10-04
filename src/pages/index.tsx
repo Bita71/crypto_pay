@@ -7,9 +7,22 @@ import { Community } from "@/sections/Community";
 import { Footer } from "@/sections/Footer";
 import { QuickStart } from "@/sections/QuickStart";
 import { ThemeProvider } from "@/shared/ui";
-import styles from "./page.module.scss";
+import styles from "./styles.module.scss";
+import { appWithTranslation } from "next-i18next";
+import { GetStaticProps } from "next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
-export default function Home() {
+export const getStaticProps: GetStaticProps = async ({
+  locale,
+}) => ({
+  props: {
+    ...(await serverSideTranslations(locale ?? 'en', [
+      'common',
+    ])),
+  },
+})
+
+function Home() {
   return (
     <ThemeProvider>
       <Header />
@@ -25,3 +38,5 @@ export default function Home() {
     </ThemeProvider>
   );
 }
+
+export default appWithTranslation(Home)

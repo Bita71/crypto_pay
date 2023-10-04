@@ -1,4 +1,3 @@
-'use client'
 import React from "react";
 import { Button, Container, Text } from "@/shared/ui";
 import styles from "./styles.module.scss";

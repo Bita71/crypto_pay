@@ -1,0 +1,42 @@
+@import "@/shared/styles/breakpoints.module.scss";
+
+.lang {
+  &Button {
+    display: flex;
+    align-items: center;
+  }
+  &Icon {
+    color: var(--color-white);
+    font-size: 16px;
+    margin-right: 8px;
+  }
+
+  &Container {
+    position: relative;
+  }
+
+  &DropDown {
+    padding: 20px;
+    max-height: 300px;
+    overflow: auto;
+    border-radius: 20px;
+    position: absolute;
+    bottom: 100%;
+    right: 50%;
+    transform: translateX(50%);
+    background-color: var(--color-white);
+
+    :global(body.dark-theme) & {
+      background-color: var(--color-dark);
+    }
+  }
+
+  &List {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 12px;
+    display: flex;
+    flex-direction: column;
+  }
+}

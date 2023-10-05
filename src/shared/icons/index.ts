@@ -14,3 +14,4 @@ export { NETIcon } from './NET';
 export { JSIcon } from './JS';
 export { GOIcon } from './GO';
 export { PythonIcon } from './Python';
+export { PlanetIcon } from './Planet';

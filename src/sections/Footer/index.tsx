@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { NavList } from "@/features/Nav";
-import { Button, Container, Text } from "@/shared/ui";
+import { Button, ChangeLang, Container, Text } from "@/shared/ui";
 import { LogoIcon } from "@/shared/icons";
 import styles from "./styles.module.scss";
 import classNames from "classnames";
@@ -23,6 +23,7 @@ export const Footer: FC<Props> = function Footer({ className }) {
       inline: "start",
     });
   };
+
   return (
     <footer className={classNames(styles.footer, className)}>
       <Container className={styles.container}>
@@ -35,12 +36,15 @@ export const Footer: FC<Props> = function Footer({ className }) {
             variant="secondary"
             color="dark"
           >
-            {t('Get started')}
+            {t("Get started")}
           </Button>
         </div>
-        <Text variant="button" color="white" isStableColor>
-          ©2023 Crypto Bot
-        </Text>
+        <div className={styles.bottom}>
+          <Text variant="button" color="white" isStableColor>
+            ©2023 Crypto Bot
+          </Text>
+          <ChangeLang />
+        </div>
       </Container>
     </footer>
   );

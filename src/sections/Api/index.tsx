@@ -21,7 +21,7 @@ export const Api = function Api() {
           >
             {t("Explore available methods and types and integrate them in any programming language.")}
           </Text>
-          <a href="/">
+          <a href="https://t.me/CryptoBot">
             <Button
               isStableColor
               variant="secondary"

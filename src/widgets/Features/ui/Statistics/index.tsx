@@ -23,8 +23,8 @@ export const PaymentStatistics: FC<Props> = function PaymentStatistics({
       </Text>
       <Trans>
         <Text variant="base" color="gray" component="p">
-          Open <Link href="/">@CryptoBot</Link>, go to{" "}
-          <Link href="/">Crypto Pay</Link> and <Link href="/">My Apps</Link>,
+          Open <Link href="https://t.me/CryptoBot">@CryptoBot</Link>, go to{" "}
+          <Link href="https://t.me/CryptoBot">Crypto Pay</Link> and <Link href="https://t.me/CryptoBot">My Apps</Link>,
           App Name to get Statistics
         </Text>
       </Trans>

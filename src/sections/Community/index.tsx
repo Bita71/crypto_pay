@@ -37,7 +37,7 @@ export const Community = function Community() {
             </li>
           ))}
         </ul>
-        <a href="/">
+        <a href="https://t.me/CryptoBot">
           <Button variant="primary">{t("Open Devs chat")}</Button>
         </a>
       </Container>

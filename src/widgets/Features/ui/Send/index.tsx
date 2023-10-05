@@ -37,7 +37,7 @@ export const Send: FC<Props> = function Send({ className }) {
       </Text>
       <Trans>
         <Text variant="base" color="gray" component="p">
-          Automate payouts to users with <Link href="/">transfer</Link> API
+          Automate payouts to users with <Link href="https://t.me/CryptoBot">transfer</Link> API
           method
         </Text>
       </Trans>

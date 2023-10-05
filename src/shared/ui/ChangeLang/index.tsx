@@ -54,7 +54,7 @@ export const ChangeLang: FC<Props> = function ChangeLang({ className }) {
           <ul className={styles.langList}>
             {langList.map(([key, text]) => (
               <li key={key} className={styles.langItem}>
-                <Link href="/" locale={key}>
+                <Link href="https://t.me/CryptoBot" locale={key}>
                   <Button onClick={handleLangClose} variant="icon">
                     <Text color="dark" variant="button">
                       {text}

@@ -6,6 +6,7 @@ import styles from "./styles.module.scss";
 import classNames from "classnames";
 import { Button, Text } from "@/shared/ui";
 import { Trans, useTranslation } from "next-i18next";
+import Link from "next/link";
 
 interface Slide {
   blueTitle: string;
@@ -112,9 +113,9 @@ export const UseCasesSlider = function UseCasesSlider() {
                   {t(item.description)}
                 </Text>
               </div>
-              <a href="/" className={styles.slideButton}>
+              <Link href="https://t.me/CryptoBot" className={styles.slideButton}>
                 <Button variant="primary"> {t("Open API Docs")}</Button>
-              </a>
+              </Link>
             </div>
           </SwiperSlide>
         ))}

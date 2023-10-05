@@ -32,9 +32,9 @@ npm run start
 
 ## Technologies
 
-* Next.js
-* i18next
-* SCSS
-* TypeScript
-* Swiper
-* Eslint
+* [Next.js](https://nextjs.org)
+* [i18next](https://www.i18next.com/)
+* [SASS](https://sass-scss.ru)
+* [TypeScript](https://www.typescriptlang.org/)
+* [Swiper](https://swiperjs.com/)
+* [Eslint](https://eslint.org/)

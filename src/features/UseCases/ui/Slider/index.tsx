@@ -1,4 +1,3 @@
-"use client";
 import React, { useEffect, useState } from "react";
 import SwiperCore from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -6,6 +5,7 @@ import "swiper/css";
 import styles from "./styles.module.scss";
 import classNames from "classnames";
 import { Button, Text } from "@/shared/ui";
+import { Trans, useTranslation } from "next-i18next";
 
 interface Slide {
   blueTitle: string;
@@ -17,20 +17,20 @@ interface Slide {
 
 const slides = [
   {
-    blueTitle: "Instant Auto Sales: ",
+    blueTitle: "Instant Auto Sales:",
     whiteTitle: "Boost conversion",
     description:
       "Immediately deliver digital products and services to your users.",
     img: "/images/case-1.webp",
   },
   {
-    blueTitle: "Channels integration: ",
+    blueTitle: "Channels integration:",
     whiteTitle: "Seamless access",
     description: "Automatically unlock exclusive content to your users.",
     img: "/images/case-2.webp",
   },
   {
-    blueTitle: "Endless customization: ",
+    blueTitle: "Endless customization:",
     whiteTitle: "with Webhooks",
     description:
       "Receive successful payment notifications in real-time. Integrate to any scenario of your service.",
@@ -39,6 +39,7 @@ const slides = [
 ];
 
 export const UseCasesSlider = function UseCasesSlider() {
+  const { t } = useTranslation("common");
   const [width, setWidth] = useState(1600);
   const [swiper, setSwiper] = useState<SwiperCore | null>(null);
   const [activeSlide, setActiveSlide] = useState(0);
@@ -81,23 +82,26 @@ export const UseCasesSlider = function UseCasesSlider() {
             />
             <div className={styles.slideInfo}>
               <div className={styles.slideInfoText}>
-                <Text
-                  className={styles.slideTitle}
-                  variant="h2"
-                  isStableColor
-                  color="blue"
-                  component="h2"
-                >
-                  {item.blueTitle}
+                <Trans>
                   <Text
+                    className={styles.slideTitle}
                     variant="h2"
-                    color="white"
                     isStableColor
-                    component="span"
+                    color="blue"
+                    component="h2"
                   >
-                    {item.whiteTitle}
+                    {item.blueTitle}{" "}
+                    <Text
+                      variant="h2"
+                      color="white"
+                      isStableColor
+                      component="span"
+                      style={{ display: "inline" }}
+                    >
+                      {item.whiteTitle}
+                    </Text>
                   </Text>
-                </Text>
+                </Trans>
                 <Text
                   className={styles.slideDescription}
                   variant="base"
@@ -105,11 +109,11 @@ export const UseCasesSlider = function UseCasesSlider() {
                   isStableColor
                   color="white"
                 >
-                  {item.description}
+                  {t(item.description)}
                 </Text>
               </div>
               <a href="/" className={styles.slideButton}>
-                <Button variant="primary">Open API Docs</Button>
+                <Button variant="primary"> {t("Open API Docs")}</Button>
               </a>
             </div>
           </SwiperSlide>

@@ -8,19 +8,14 @@ import { Footer } from "@/sections/Footer";
 import { QuickStart } from "@/sections/QuickStart";
 import { ThemeProvider } from "@/shared/ui";
 import styles from "./styles.module.scss";
-import { appWithTranslation } from "next-i18next";
 import { GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
-export const getStaticProps: GetStaticProps = async ({
-  locale,
-}) => ({
+export const getStaticProps: GetStaticProps = async ({ locale }) => ({
   props: {
-    ...(await serverSideTranslations(locale ?? 'en', [
-      'common',
-    ])),
+    ...(await serverSideTranslations(locale ?? "en", ["common"])),
   },
-})
+});
 
 function Home() {
   return (
@@ -30,7 +25,7 @@ function Home() {
         <Hero />
         <UseCases />
         <Features />
-        <QuickStart/ >
+        <QuickStart />
         <Api />
         <Community />
       </main>
@@ -39,4 +34,4 @@ function Home() {
   );
 }
 
-export default appWithTranslation(Home)
+export default Home;

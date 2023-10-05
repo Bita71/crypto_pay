@@ -2,6 +2,7 @@ import React, { FC, MouseEvent } from "react";
 import { Button, Text } from "@/shared/ui";
 import styles from "./styles.module.scss";
 import classNames from "classnames";
+import { useTranslation } from "next-i18next";
 
 const links = [
   { title: "Use cases", id: "cases" },
@@ -20,6 +21,8 @@ export const NavList: FC<Props> = function NavList({
   isStableColor = false,
   className,
 }) {
+  const {t} = useTranslation('common');
+
   const handleClick = (event: MouseEvent<HTMLButtonElement>) => {
     const { id } = event.currentTarget.dataset;
     if (!id) {
@@ -46,7 +49,7 @@ export const NavList: FC<Props> = function NavList({
               component="span"
               variant="button"
             >
-              {link.title}
+              {t(link.title)}
             </Text>
           </Button>
         </li>

@@ -2,6 +2,7 @@ import React from "react";
 import { Button, Container, Text } from "@/shared/ui";
 import { GOIcon, JSIcon, NETIcon, PHPIcon, PythonIcon } from "@/shared/icons";
 import styles from "./styles.module.scss";
+import { Trans, useTranslation } from "next-i18next";
 
 const channels = [
   { name: "crypto-pay-api", Icon: JSIcon },
@@ -12,16 +13,18 @@ const channels = [
 ];
 
 export const Community = function Community() {
+  const { t } = useTranslation("common");
   return (
     <section>
       <Container className={styles.container}>
         <div className={styles.info}>
           <Text variant="h2" component="h2">
-            Join dev community
+            {t("Join dev community")}
           </Text>
           <Text color="gray" variant="base" component="p">
-            Connect with bot developers and explore the possibilities our crypto
-            payments service unlocks.
+            {t(
+              "Connect with bot developers and explore the possibilities our crypto payments service unlocks."
+            )}
           </Text>
         </div>
         <ul className={styles.channels}>
@@ -35,7 +38,7 @@ export const Community = function Community() {
           ))}
         </ul>
         <a href="/">
-          <Button variant="primary">Open Devs chat</Button>
+          <Button variant="primary">{t("Open Devs chat")}</Button>
         </a>
       </Container>
     </section>

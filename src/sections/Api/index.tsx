@@ -1,8 +1,10 @@
 import React from "react";
 import { Button, Card, Container, Text } from "@/shared/ui";
 import styles from "./styles.module.scss";
+import { Trans, useTranslation } from "next-i18next";
 
 export const Api = function Api() {
+  const { t } = useTranslation("common");
   return (
     <section>
       <Container>
@@ -17,8 +19,7 @@ export const Api = function Api() {
             component="p"
             color="white"
           >
-            Explore available methods and types and integrate them in any
-            programming language.
+            {t("Explore available methods and types and integrate them in any programming language.")}
           </Text>
           <a href="/">
             <Button
@@ -26,7 +27,7 @@ export const Api = function Api() {
               variant="secondary"
               color="dark"
             >
-              Open API Docs
+              {t('Open API Docs')}
             </Button>
           </a>
         </Card>

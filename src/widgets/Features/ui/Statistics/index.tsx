@@ -3,6 +3,7 @@ import { Card, Link, Text } from "@/shared/ui";
 
 import styles from "./styles.module.scss";
 import classNames from "classnames";
+import { Trans, useTranslation } from "next-i18next";
 
 interface Props {
   className?: string;
@@ -11,18 +12,22 @@ interface Props {
 export const PaymentStatistics: FC<Props> = function PaymentStatistics({
   className,
 }) {
+  const { t } = useTranslation("common");
   return (
     <Card className={classNames(styles.card, className)}>
       <video controls={false} muted autoPlay className={styles.video} loop>
         <source src="/movies/Stats.mp4" type="video/mp4" />
       </video>
       <Text className={styles.title} variant="h3" component="h4">
-        Payment statistics
+        {t("Payment statistics")}
       </Text>
-      <Text variant="base" color="gray" component="p">
-        Open <Link href="/">@CryptoBot</Link>, go to <Link href="/">Crypto Pay</Link> and{" "}
-        <Link href="/">My Apps</Link>, App Name to get Statistics
-      </Text>
+      <Trans>
+        <Text variant="base" color="gray" component="p">
+          Open <Link href="/">@CryptoBot</Link>, go to{" "}
+          <Link href="/">Crypto Pay</Link> and <Link href="/">My Apps</Link>,
+          App Name to get Statistics
+        </Text>
+      </Trans>
     </Card>
   );
 };

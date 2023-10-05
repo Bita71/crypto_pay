@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, Container, Text } from "@/shared/ui";
 import styles from "./styles.module.scss";
+import { Trans, useTranslation } from "next-i18next";
 
 const botsImages = [
   "/images/bot-1.webp",
@@ -11,6 +12,8 @@ const botsImages = [
 ];
 
 export const Hero = function Hero() {
+  const { t } = useTranslation("common");
+
   const handleClick = () => {
     const element = document.getElementById("start");
     if (!element) {
@@ -26,22 +29,30 @@ export const Hero = function Hero() {
     <section>
       <Container className={styles.hero}>
         <div className={styles.info}>
-          <Text className={styles.title} variant="h1" component="h1">
-            Crypto payments for{" "}
-            <Text variant="h1" color="blue" component="span">
-              telegram bots
+          <Trans>
+            <Text className={styles.title} variant="h1" component="h1">
+              Crypto payments for{" "}
+              <Text
+                style={{ display: "inline" }}
+                variant="h1"
+                color="blue"
+                component="span"
+              >
+                telegram bots
+              </Text>
             </Text>
-          </Text>
+          </Trans>
           <Text className={styles.text} variant="base" component="h2">
-            Seamlessly accept crypto payments in your Telegram bots and
-            services.
+            {t(
+              "Seamlessly accept crypto payments in your Telegram bots and services."
+            )}
           </Text>
           <Button
             onClick={handleClick}
             className={styles.button}
             variant="primary"
           >
-            Get started
+            {t("Get started")}
           </Button>
           <ul className={styles.icons}>
             {botsImages.map((botImage) => (
@@ -53,7 +64,7 @@ export const Hero = function Hero() {
             ))}
           </ul>
           <Text component="p" variant="base">
-            Popular bots use Crypto Pay
+            {t("Popular bots use Crypto Pay")}
           </Text>
         </div>
         <div className={styles.phone} />

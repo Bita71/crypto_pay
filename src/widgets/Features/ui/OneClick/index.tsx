@@ -1,15 +1,16 @@
-"use client";
 import React, { FC } from "react";
 import { Card, Link, Text, Theme, useTheme } from "@/shared/ui";
 
 import styles from "./styles.module.scss";
 import classNames from "classnames";
+import { Trans, useTranslation } from "next-i18next";
 
 interface Props {
   className?: string;
 }
 
 export const OneClick: FC<Props> = function OneClick({ className }) {
+  const {t} = useTranslation('common');
   const { theme } = useTheme();
 
   return (
@@ -32,12 +33,14 @@ export const OneClick: FC<Props> = function OneClick({ className }) {
         </video>{" "}
       </div>
       <Text className={styles.title} variant="h3" component="h3">
-        One click to start
+        {t('One click to start')}
       </Text>
-      <Text variant="base" color="gray" component="p">
-        Open <Link href="/">@CryptoBot</Link>, go to <Link href="/">Crypto Pay</Link> and tap
-        Create App to get API Token
-      </Text>
+      <Trans>
+        <Text variant="base" color="gray" component="p">
+          Open <Link href="/">@CryptoBot</Link>, go to{" "}
+          <Link href="/">Crypto Pay</Link> and tap Create App to get API Token
+        </Text>
+      </Trans>
     </Card>
   );
 };

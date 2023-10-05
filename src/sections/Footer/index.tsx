@@ -1,16 +1,17 @@
-"use client";
 import React, { FC } from "react";
 import { NavList } from "@/features/Nav";
 import { Button, Container, Text } from "@/shared/ui";
 import { LogoIcon } from "@/shared/icons";
 import styles from "./styles.module.scss";
 import classNames from "classnames";
+import { useTranslation } from "next-i18next";
 
 interface Props {
   className?: string;
 }
 
 export const Footer: FC<Props> = function Footer({ className }) {
+  const { t } = useTranslation("common");
   const handleClick = () => {
     const element = document.getElementById("start");
     if (!element) {
@@ -34,7 +35,7 @@ export const Footer: FC<Props> = function Footer({ className }) {
             variant="secondary"
             color="dark"
           >
-            Get started
+            {t('Get started')}
           </Button>
         </div>
         <Text variant="button" color="white" isStableColor>

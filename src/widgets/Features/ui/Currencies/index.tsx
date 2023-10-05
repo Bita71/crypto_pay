@@ -12,6 +12,7 @@ import {
 } from "@/shared/icons";
 import styles from "./styles.module.scss";
 import classNames from "classnames";
+import { Trans, useTranslation } from "next-i18next";
 
 const currencies = [
   {
@@ -53,16 +54,19 @@ interface Props {
 }
 
 export const Currencies: FC<Props> = function Currencies({ className }) {
+  const { t } = useTranslation("common");
   return (
     <Card className={classNames(styles.card, className)}>
       <div className={styles.textBlock}>
         <Text variant="h3" component="h2">
-          Accept a wide range of cryptocurrencies
+          {t("Accept a wide range of cryptocurrencies")}
         </Text>
-        <Text variant="base" color="gray" component="p">
-          Bill any supported cryptocurrencies with asset parameter in{" "}
-          <Link href="/">GetInvoice</Link> method
-        </Text>
+        <Trans>
+          <Text variant="base" color="gray" component="p">
+            Bill any supported cryptocurrencies with asset parameter in{" "}
+            <Link href="/">GetInvoice</Link> method
+          </Text>
+        </Trans>
       </div>
       <ul className={styles.currencies}>
         {currencies.map((item, index) => {

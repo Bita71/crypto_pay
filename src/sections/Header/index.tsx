@@ -1,12 +1,13 @@
-"use client";
 import React from "react";
 import classNames from "classnames";
 import { NavList } from "@/features/Nav";
 import { Button, Container, Theme, useTheme } from "@/shared/ui";
 import { LogoIcon, MoonIcon, SunIcon } from "@/shared/icons";
 import styles from "./styles.module.scss";
+import { useTranslation } from "next-i18next";
 
 export const Header = function Header() {
+  const {t} = useTranslation('common')
   const { theme, toggleTheme } = useTheme();
 
   const handleClick = () => {
@@ -37,7 +38,7 @@ export const Header = function Header() {
             )}
           </Button>
           <Button onClick={handleClick} variant="secondary">
-            Get started
+            {t('Get started')}
           </Button>
         </div>
       </Container>

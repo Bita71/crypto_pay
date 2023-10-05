@@ -2,6 +2,7 @@ import React from "react";
 import { Button, Card, Container, Text } from "@/shared/ui";
 import styles from "./styles.module.scss";
 import { Trans, useTranslation } from "next-i18next";
+import Link from "next/link";
 
 export const Api = function Api() {
   const { t } = useTranslation("common");
@@ -21,7 +22,7 @@ export const Api = function Api() {
           >
             {t("Explore available methods and types and integrate them in any programming language.")}
           </Text>
-          <a href="https://t.me/CryptoBot">
+          <Link href="https://t.me/CryptoBot">
             <Button
               isStableColor
               variant="secondary"
@@ -29,7 +30,7 @@ export const Api = function Api() {
             >
               {t('Open API Docs')}
             </Button>
-          </a>
+          </Link>
         </Card>
       </Container>
     </section>

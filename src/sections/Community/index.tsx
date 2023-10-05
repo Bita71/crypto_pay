@@ -3,6 +3,7 @@ import { Button, Container, Text } from "@/shared/ui";
 import { GOIcon, JSIcon, NETIcon, PHPIcon, PythonIcon } from "@/shared/icons";
 import styles from "./styles.module.scss";
 import { Trans, useTranslation } from "next-i18next";
+import Link from "next/link";
 
 const channels = [
   { name: "crypto-pay-api", Icon: JSIcon },
@@ -37,9 +38,9 @@ export const Community = function Community() {
             </li>
           ))}
         </ul>
-        <a href="https://t.me/CryptoBot">
+        <Link href="https://t.me/CryptoBot">
           <Button variant="primary">{t("Open Devs chat")}</Button>
-        </a>
+        </Link>
       </Container>
     </section>
   );

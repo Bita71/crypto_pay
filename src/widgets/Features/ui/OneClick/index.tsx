@@ -16,7 +16,7 @@ export const OneClick: FC<Props> = function OneClick({ className }) {
   return (
     <Card className={classNames(styles.card, className)}>
       <div className={styles.videoBlock}>
-        <video
+        <video playsInline
           className={styles.video}
           key={theme}
           controls={false}

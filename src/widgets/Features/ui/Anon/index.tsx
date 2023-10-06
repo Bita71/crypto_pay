@@ -13,7 +13,7 @@ export const Anon: FC<Props> = function Anon({ className }) {
   const { t } = useTranslation("common");
   return (
     <Card className={classNames(styles.card, className)}>
-      <video className={styles.video} controls={false} muted autoPlay loop>
+      <video playsInline className={styles.video} controls={false} muted autoPlay loop>
         <source src={"/movies/anon.mp4"} type="video/mp4" />
       </video>
       <Text className={styles.title} variant="h3" component="h3">

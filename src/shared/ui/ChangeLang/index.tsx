@@ -10,7 +10,6 @@ import classNames from "classnames";
 const langMap: Record<string, string> = {
   ru: "Русский",
   en: "English",
-  de: "Deutsch",
 };
 
 interface Props {

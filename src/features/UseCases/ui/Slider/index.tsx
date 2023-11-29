@@ -113,7 +113,7 @@ export const UseCasesSlider = function UseCasesSlider() {
                   {t(item.description)}
                 </Text>
               </div>
-              <Link href="https://t.me/CryptoBot" className={styles.slideButton}>
+              <Link href="https://help.crypt.bot/crypto-pay-api" className={styles.slideButton}>
                 <Button variant="primary"> {t("Open API Docs")}</Button>
               </Link>
             </div>

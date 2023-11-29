@@ -6,11 +6,31 @@ import { Trans, useTranslation } from "next-i18next";
 import Link from "next/link";
 
 const channels = [
-  { name: "crypto-pay-api", Icon: JSIcon },
-  { name: "CryptoPay", Icon: NETIcon },
-  { name: "crypto-pay-api", Icon: PHPIcon },
-  { name: "aiocryptopay", Icon: PythonIcon },
-  { name: "cryptobot-sdk-golang", Icon: GOIcon },
+  {
+    name: "crypto-pay-api",
+    Icon: JSIcon,
+    link: "https://github.com/Foile/crypto-pay-api",
+  },
+  {
+    name: "CryptoPay",
+    Icon: NETIcon,
+    link: "https://github.com/WinoGarcia/CryptoPay",
+  },
+  {
+    name: "crypto-pay-api",
+    Icon: PHPIcon,
+    link: "https://github.com/klev-o/crypto-pay-api",
+  },
+  {
+    name: "aiocryptopay",
+    Icon: PythonIcon,
+    link: "https://github.com/layerqa/aiocryptopay",
+  },
+  {
+    name: "cryptobot-sdk-golang",
+    Icon: GOIcon,
+    link: "https://github.com/arthurshafikov/cryptobot-sdk-golang",
+  },
 ];
 
 export const Community = function Community() {
@@ -31,14 +51,16 @@ export const Community = function Community() {
         <ul className={styles.channels}>
           {channels.map((channel, index) => (
             <li className={styles.channelsItem} key={channel.name + index}>
-              <channel.Icon className={styles.channelsIcon} />
-              <Text variant="base" color="gray">
-                {channel.name}
-              </Text>
+              <Link href={channel.link}>
+                <channel.Icon className={styles.channelsIcon} />
+                <Text variant="base" color="gray">
+                  {channel.name}
+                </Text>
+              </Link>
             </li>
           ))}
         </ul>
-        <Link href="https://t.me/CryptoBot">
+        <Link href="https://t.me/CryptoPayDev">
           <Button variant="primary">{t("Open Devs chat")}</Button>
         </Link>
       </Container>

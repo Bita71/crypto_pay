@@ -45,21 +45,21 @@ export const QuickStart = function QuickStart() {
                   <li>
                     <Trans>
                       <Text color="dark" component="span" variant="base">
-                        2. Go to <Link href="https://t.me/CryptoBot">Crypto Pay</Link>
+                        2. Go to <Link href="https://t.me/CryptoBot?start=pay">Crypto Pay</Link>
                       </Text>
                     </Trans>
                   </li>
                   <li>
                     <Trans>
                       <Text color="dark" component="span" variant="base">
-                        3. Tap <Link href="https://t.me/CryptoBot">Create App</Link>
+                        3. Tap Create App
                       </Text>
                     </Trans>
                   </li>
                   <li>
                     <Trans>
                       <Text color="dark" component="span" variant="base">
-                        4. Get <Link href="https://t.me/CryptoBot">API Token</Link>
+                        4. Get API Token
                       </Text>
                     </Trans>
                   </li>
@@ -95,19 +95,19 @@ export const QuickStart = function QuickStart() {
                 <ul className={styles.apiSteps}>
                   <li className={styles.apiStepsItem}>
                     <span className={styles.apiStepsCircle} />
-                    <Link href="https://t.me/CryptoBot">{t("URL query string")}</Link>
+                    <Text variant="base" color="gray" component="p">{t("URL query string")}</Text>
                   </li>
                   <li className={styles.apiStepsItem}>
                     <span className={styles.apiStepsCircle} />
-                    <Link href="https://t.me/CryptoBot">application/json</Link>
+                    <Text variant="base" color="gray" component="p">application/json</Text>
                   </li>
                   <li className={styles.apiStepsItem}>
                     <span className={styles.apiStepsCircle} />
-                    <Link href="https://t.me/CryptoBot">application/x-www-form-urlencoded</Link>
+                    <Text variant="base" color="gray" component="p">application/x-www-form-urlencoded</Text>
                   </li>
                   <li className={styles.apiStepsItem}>
                     <span className={styles.apiStepsCircle} />
-                    <Link href="https://t.me/CryptoBot">multipart/form-data</Link>
+                    <Text variant="base" color="gray" component="p">multipart/form-data</Text>
                   </li>
                 </ul>
               </div>
@@ -139,7 +139,7 @@ export const QuickStart = function QuickStart() {
                     <span className={styles.apiStepsCircle} />
                     <Trans>
                       <Text variant="base" color="gray" component="p">
-                        <Link href="https://t.me/CryptoBot">getInvoices</Link> method to get a list
+                        <Link href="https://help.crypt.bot/crypto-pay-api#getInvoices">getInvoices</Link> method to get a list
                         of created invoices.
                       </Text>
                     </Trans>
@@ -148,7 +148,7 @@ export const QuickStart = function QuickStart() {
                     <span className={styles.apiStepsCircle} />
                     <Trans>
                       <Text variant="base" color="gray" component="p">
-                        <Link href="https://t.me/CryptoBot">Webhooks</Link> to receive updates in
+                        <Link href="https://help.crypt.bot/crypto-pay-api#webhooks">Webhooks</Link> to receive updates in
                         realtime.
                       </Text>
                     </Trans>

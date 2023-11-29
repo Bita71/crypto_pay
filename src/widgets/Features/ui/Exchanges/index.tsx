@@ -38,7 +38,7 @@ export const Exchanges: FC<Props> = function Exchanges({ className }) {
       <Trans>
         <Text variant="base" color="gray" component="p">
           Request up to date currency rate with the{" "}
-          <Link href="https://t.me/CryptoBot">getExchangeRates</Link> API method
+          <Link href="https://help.crypt.bot/crypto-pay-api#getExchangeRates">getExchangeRates</Link> API method
         </Text>
       </Trans>
     </Card>

@@ -47,6 +47,11 @@
     align-items: center;
     flex-direction: column;
     gap: 16px;
+    transition: opacity .2s ease-in-out;
+
+    &:hover {
+      opacity: .5;
+    }
 
     @media screen and (max-width: $mobile-breakpoint) {
       width: 103px;

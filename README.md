@@ -9,25 +9,25 @@ Demo - https://crypto-pay-ivory.vercel.app
 Install
 
 ```bash
-npm i
+yarn install
 ```
 
 Run development server
 
 ```bash
-npm run dev
+yarn dev
 ```
 
 Get production build
 
 ```bash
-npm run build
+yarn build
 ```
 
 Run production server
 
 ```bash
-npm run start
+yarn start
 ```
 
 ## Technologies

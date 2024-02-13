@@ -33,9 +33,9 @@ export const Send: FC<Props> = function Send({ className }) {
         </video>
       </div>
       <Text className={styles.title} variant="h3" component="h3">
-        {t("Send coins to users")}
+        {t('features-send-coins-title',"Send coins to users")}
       </Text>
-      <Trans>
+      <Trans i18nKey={'features-send-coins-description'}>
         <Text variant="base" color="gray" component="p">
           Automate payouts to users with <Link href="https://help.crypt.bot/crypto-pay-api#transfer">transfer</Link> API
           method

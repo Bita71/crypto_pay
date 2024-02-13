@@ -9,9 +9,9 @@ export const QuickStart = function QuickStart() {
   return (
     <section id="start" className={styles.section}>
       <Container className={styles.container}>
-        <Trans>
+        <Trans i18nKey={"integrate-title"}>
           <Text className={styles.title} variant="h2" component="h2">
-            Quick start using{" "}
+            How to integrate{" "}
             <Text
               style={{ display: "inline" }}
               isStableColor
@@ -32,32 +32,32 @@ export const QuickStart = function QuickStart() {
               </Text>
               <div className={styles.stepsContent}>
                 <Text className={styles.stepsTitle} variant="h3" component="h3">
-                  {t("Authorizing your app")}
+                  {t("integrate-auth-title", "Authorizing your app")}
                 </Text>
                 <ol className={styles.authSteps}>
                   <li>
-                    <Trans>
-                      <Text color="dark" component="span" variant="base">
-                        1. Open <Link href="https://t.me/CryptoBot">@CryptoBot</Link>
-                      </Text>
-                    </Trans>
+                    <Text color="dark" component="span" variant="base">
+                      1. {t("integrate-auth-open", "Open")}{" "}
+                      <Link href="https://t.me/CryptoBot">@CryptoBot</Link>
+                    </Text>
                   </li>
                   <li>
-                    <Trans>
-                      <Text color="dark" component="span" variant="base">
-                        2. Go to <Link href="https://t.me/CryptoBot?start=pay">Crypto Pay</Link>
-                      </Text>
-                    </Trans>
+                    <Text color="dark" component="span" variant="base">
+                      2. {t("integrate-auth-pay", "Go to")}{" "}
+                      <Link href="https://t.me/CryptoBot?start=pay">
+                        Crypto Pay
+                      </Link>
+                    </Text>
                   </li>
                   <li>
-                    <Trans>
+                    <Trans i18nKey={"integrate-auth-app"}>
                       <Text color="dark" component="span" variant="base">
                         3. Tap Create App
                       </Text>
                     </Trans>
                   </li>
                   <li>
-                    <Trans>
+                    <Trans i18nKey={"integrate-auth-token"}>
                       <Text color="dark" component="span" variant="base">
                         4. Get API Token
                       </Text>
@@ -78,9 +78,9 @@ export const QuickStart = function QuickStart() {
               </Text>
               <div className={styles.stepsContent}>
                 <Text className={styles.stepsTitle} variant="h3" component="h3">
-                  {t("Crypto Pay API Request")}
+                  {t("integrate-pay-title", "Crypto Pay API Request")}
                 </Text>
-                <Trans>
+                <Trans i18nKey={"integrate-pay-description"}>
                   <Text
                     variant="base"
                     color="gray"
@@ -95,19 +95,27 @@ export const QuickStart = function QuickStart() {
                 <ul className={styles.apiSteps}>
                   <li className={styles.apiStepsItem}>
                     <span className={styles.apiStepsCircle} />
-                    <Text variant="base" color="gray" component="p">{t("URL query string")}</Text>
+                    <Text variant="base" color="gray" component="p">
+                      {t("integrate-pay-url", "URL query string")}
+                    </Text>
                   </li>
                   <li className={styles.apiStepsItem}>
                     <span className={styles.apiStepsCircle} />
-                    <Text variant="base" color="gray" component="p">application/json</Text>
+                    <Text variant="base" color="gray" component="p">
+                      application/json
+                    </Text>
                   </li>
                   <li className={styles.apiStepsItem}>
                     <span className={styles.apiStepsCircle} />
-                    <Text variant="base" color="gray" component="p">application/x-www-form-urlencoded</Text>
+                    <Text variant="base" color="gray" component="p">
+                      application/x-www-form-urlencoded
+                    </Text>
                   </li>
                   <li className={styles.apiStepsItem}>
                     <span className={styles.apiStepsCircle} />
-                    <Text variant="base" color="gray" component="p">multipart/form-data</Text>
+                    <Text variant="base" color="gray" component="p">
+                      multipart/form-data
+                    </Text>
                   </li>
                 </ul>
               </div>
@@ -124,7 +132,7 @@ export const QuickStart = function QuickStart() {
               </Text>
               <div className={styles.stepsContent}>
                 <Text className={styles.stepsTitle} variant="h3" component="h3">
-                  {t("Getting updates")}
+                  {t("integrate-updates-title", "Getting updates")}
                 </Text>
                 <Text
                   variant="base"
@@ -132,24 +140,31 @@ export const QuickStart = function QuickStart() {
                   component="p"
                   className={styles.stepsText}
                 >
-                  {t("There are two ways of receiving updates for your app:")}
+                  {t(
+                    "integrate-updates-description",
+                    "There are two ways of receiving updates for your app:"
+                  )}
                 </Text>
                 <ul className={styles.apiSteps}>
                   <li className={styles.apiStepsItem}>
                     <span className={styles.apiStepsCircle} />
-                    <Trans>
+                    <Trans i18nKey={"integrate-updates-get-invoice"}>
                       <Text variant="base" color="gray" component="p">
-                        <Link href="https://help.crypt.bot/crypto-pay-api#getInvoices">getInvoices</Link> method to get a list
-                        of created invoices.
+                        <Link href="https://help.crypt.bot/crypto-pay-api#getInvoices">
+                          getInvoices
+                        </Link>{" "}
+                        method to get a list of created invoices.
                       </Text>
                     </Trans>
                   </li>
                   <li className={styles.apiStepsItem}>
                     <span className={styles.apiStepsCircle} />
-                    <Trans>
+                    <Trans i18nKey={"integrate-updates-webhooks"}>
                       <Text variant="base" color="gray" component="p">
-                        <Link href="https://help.crypt.bot/crypto-pay-api#webhooks">Webhooks</Link> to receive updates in
-                        realtime.
+                        <Link href="https://help.crypt.bot/crypto-pay-api#webhooks">
+                          Webhooks
+                        </Link>{" "}
+                        to receive updates in realtime.
                       </Text>
                     </Trans>
                   </li>

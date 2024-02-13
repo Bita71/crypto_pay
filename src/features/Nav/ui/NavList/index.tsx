@@ -49,7 +49,7 @@ export const NavList: FC<Props> = function NavList({
               component="span"
               variant="button"
             >
-              {t(link.title)}
+              {t(`nav-${link.id}`, link.title)}
             </Text>
           </Button>
         </li>

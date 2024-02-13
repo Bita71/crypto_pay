@@ -26,5 +26,6 @@
     "eslint-config-next": "latest",
     "sass": "^1.68.0",
     "typescript": "latest"
-  }
+  },
+  "packageManager": "yarn@4.0.2"
 }

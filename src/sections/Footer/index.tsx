@@ -36,7 +36,7 @@ export const Footer: FC<Props> = function Footer({ className }) {
             variant="secondary"
             color="dark"
           >
-            {t("Get started")}
+            {t("get-started", "Integrate")}
           </Button>
         </div>
         <div className={styles.bottom}>

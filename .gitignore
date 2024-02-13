@@ -18,6 +18,13 @@
 # misc
 .DS_Store
 *.pem
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.idea
+.vscode
 
 # debug
 npm-debug.log*
@@ -26,6 +33,9 @@ yarn-error.log*
 
 # local env files
 .env*.local
+.env.local
+.env.*.local
+.env
 
 # vercel
 .vercel
@@ -33,3 +43,12 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# yarn 
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions

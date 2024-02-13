@@ -29,7 +29,7 @@ export const Hero = function Hero() {
     <section>
       <Container className={styles.hero}>
         <div className={styles.info}>
-          <Trans>
+          <Trans i18nKey={"hero-title"}>
             <Text className={styles.title} variant="h1" component="h1">
               Crypto payments for{" "}
               <Text
@@ -38,13 +38,14 @@ export const Hero = function Hero() {
                 color="blue"
                 component="span"
               >
-                telegram bots
+                Telegram Bots
               </Text>
             </Text>
           </Trans>
           <Text className={styles.text} variant="base" component="h2">
             {t(
-              "Seamlessly accept crypto payments in your Telegram bots and services."
+              "hero-description",
+              "Use Crypto Pay in your Telegram Bots and accept crypto payments seamlessly."
             )}
           </Text>
           <Button
@@ -52,7 +53,7 @@ export const Hero = function Hero() {
             className={styles.button}
             variant="primary"
           >
-            {t("Get started")}
+            {t("get-started", "Integrate")}
           </Button>
           <ul className={styles.icons}>
             {botsImages.map((botImage) => (
@@ -64,7 +65,7 @@ export const Hero = function Hero() {
             ))}
           </ul>
           <Text component="p" variant="base">
-            {t("Popular bots use Crypto Pay")}
+            {t("hero-bots", "Popular bots use Crypto Pay")}
           </Text>
         </div>
         <div className={styles.phone} />

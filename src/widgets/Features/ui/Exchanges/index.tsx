@@ -33,9 +33,9 @@ export const Exchanges: FC<Props> = function Exchanges({ className }) {
         </video>
       </div>
       <Text className={styles.title} variant="h3" component="h3">
-        {t("Real-time exchange rates")}
+        {t('features-real-time-title', "Real-time exchange rates")}
       </Text>
-      <Trans>
+      <Trans i18nKey={'features-real-time-description'}>
         <Text variant="base" color="gray" component="p">
           Request up to date currency rate with the{" "}
           <Link href="https://help.crypt.bot/crypto-pay-api#getExchangeRates">getExchangeRates</Link> API method

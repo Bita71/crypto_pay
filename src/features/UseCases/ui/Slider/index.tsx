@@ -8,16 +8,9 @@ import { Button, Text } from "@/shared/ui";
 import { Trans, useTranslation } from "next-i18next";
 import Link from "next/link";
 
-interface Slide {
-  blueTitle: string;
-  whiteTitle: string;
-  description: string;
-  bgcolor: string;
-  img: string;
-}
-
 const slides = [
   {
+    id: 'auto-sales',
     blueTitle: "Instant Auto Sales:",
     whiteTitle: "Boost conversion",
     description:
@@ -25,16 +18,18 @@ const slides = [
     img: "/images/case-1.webp",
   },
   {
+    id: 'channels-integration',
     blueTitle: "Channels integration:",
     whiteTitle: "Seamless access",
     description: "Automatically unlock exclusive content to your users.",
     img: "/images/case-2.webp",
   },
   {
+    id: 'endless-customization',
     blueTitle: "Endless customization:",
     whiteTitle: "with Webhooks",
     description:
-      "Receive successful payment notifications in real-time. Integrate to any scenario of your service.",
+      "Receive notifications about new payments. Integrate to any scenario of your service.",
     img: "/images/case-3.webp",
   },
 ];
@@ -83,7 +78,7 @@ export const UseCasesSlider = function UseCasesSlider() {
             />
             <div className={styles.slideInfo}>
               <div className={styles.slideInfoText}>
-                <Trans>
+                <Trans i18nKey={`cases-${item.id}`}>
                   <Text
                     className={styles.slideTitle}
                     variant="h2"
@@ -110,11 +105,11 @@ export const UseCasesSlider = function UseCasesSlider() {
                   isStableColor
                   color="white"
                 >
-                  {t(item.description)}
+                  {t(`cases-${item.id}-description`, item.description)}
                 </Text>
               </div>
               <Link href="https://help.crypt.bot/crypto-pay-api" className={styles.slideButton}>
-                <Button variant="primary"> {t("Open API Docs")}</Button>
+                <Button variant="primary"> {t('api-open-docs' ,"Open API Docs")}</Button>
               </Link>
             </div>
           </SwiperSlide>

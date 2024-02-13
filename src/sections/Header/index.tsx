@@ -1,7 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import { NavList } from "@/features/Nav";
-import { Button, ChangeLang, Container, Theme, useTheme } from "@/shared/ui";
+import { Button, Container, Theme, useTheme } from "@/shared/ui";
 import { LogoIcon, MoonIcon, SunIcon } from "@/shared/icons";
 import styles from "./styles.module.scss";
 import { useTranslation } from "next-i18next";
@@ -38,7 +38,7 @@ export const Header = function Header() {
             )}
           </Button>
           <Button onClick={handleClick} variant="secondary">
-            {t("Get started")}
+            {t("get-started", "Integrate")}
           </Button>
         </div>
       </Container>

@@ -33,9 +33,9 @@ export const OneClick: FC<Props> = function OneClick({ className }) {
         </video>{" "}
       </div>
       <Text className={styles.title} variant="h3" component="h3">
-        {t('One click to start')}
+        {t('features-one-click-title', 'One click to start')}
       </Text>
-      <Trans>
+      <Trans i18nKey={'features-one-click-description'}>
         <Text variant="base" color="gray" component="p">
           Open <Link href="https://t.me/CryptoBot">@CryptoBot</Link>, go to{" "}
           <Link href="https://t.me/CryptoBot?start=pay">Crypto Pay</Link> and tap Create App to get API Token

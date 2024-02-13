@@ -59,12 +59,18 @@ export const Currencies: FC<Props> = function Currencies({ className }) {
     <Card className={classNames(styles.card, className)}>
       <div className={styles.textBlock}>
         <Text variant="h3" component="h2">
-          {t("Accept a wide range of cryptocurrencies")}
+          {t(
+            "features-currencies-title",
+            "Accept a wide range of cryptocurrencies"
+          )}
         </Text>
-        <Trans>
+        <Trans i18nKey={"features-currencies-description"}>
           <Text variant="base" color="gray" component="p">
-            Bill any supported cryptocurrencies with asset parameter in{" "}
-            <Link href="https://help.crypt.bot/crypto-pay-api#getCurrencies">GetInvoice</Link> method
+            Send invoices in any supported coin with asset parameter in{" "}
+            <Link href="https://help.crypt.bot/crypto-pay-api#getCurrencies">
+              GetInvoice
+            </Link>{" "}
+            method
           </Text>
         </Trans>
       </div>

@@ -20,15 +20,14 @@ export const Api = function Api() {
             component="p"
             color="white"
           >
-            {t("Explore available methods and types and integrate them in any programming language.")}
+            {t(
+              "api-description",
+              "Explore available methods and types and integrate them in any programming language."
+            )}
           </Text>
           <Link href="https://help.crypt.bot/crypto-pay-api">
-            <Button
-              isStableColor
-              variant="secondary"
-              color="dark"
-            >
-              {t('Open API Docs')}
+            <Button isStableColor variant="secondary" color="dark">
+              {t("api-open-docs", "Open API Docs")}
             </Button>
           </Link>
         </Card>

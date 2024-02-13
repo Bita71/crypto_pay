@@ -26,9 +26,9 @@ export const PaymentStatistics: FC<Props> = function PaymentStatistics({
         <source src="/movies/stats.mp4" type="video/mp4" />
       </video>
       <Text className={styles.title} variant="h3" component="h4">
-        {t("Payment statistics")}
+        {t('features-payment-title', "Payment statistics")}
       </Text>
-      <Trans>
+      <Trans i18nKey={'features-payment-description'}>
         <Text variant="base" color="gray" component="p">
           Open <Link href="https://t.me/CryptoBot">@CryptoBot</Link>, go to{" "}
           <Link href="https://t.me/CryptoBot?start=pay">Crypto Pay</Link> and My Apps, App Name to get Statistics

@@ -17,9 +17,9 @@ export const Anon: FC<Props> = function Anon({ className }) {
         <source src={"/movies/anon.mp4"} type="video/mp4" />
       </video>
       <Text className={styles.title} variant="h3" component="h3">
-        {t("Anonymous payments")}
+        {t("features-anonymous-title","Anonymous payments")}
       </Text>
-      <Trans>
+      <Trans i18nKey={'features-anonymous-description'}>
         <Text variant="base" color="gray" component="p">
           Use{" "}
           <Text

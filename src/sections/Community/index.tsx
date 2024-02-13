@@ -40,10 +40,11 @@ export const Community = function Community() {
       <Container className={styles.container}>
         <div className={styles.info}>
           <Text variant="h2" component="h2">
-            {t("Join dev community")}
+            {t("community-title", "Join dev community")}
           </Text>
           <Text color="gray" variant="base" component="p">
             {t(
+              "community-description",
               "Connect with bot developers and explore the possibilities our crypto payments service unlocks."
             )}
           </Text>
@@ -61,7 +62,9 @@ export const Community = function Community() {
           ))}
         </ul>
         <Link href="https://t.me/CryptoPayDev">
-          <Button variant="primary">{t("Open Devs chat")}</Button>
+          <Button variant="primary">
+            {t("community-open-chat", "Open Devs chat")}
+          </Button>
         </Link>
       </Container>
     </section>

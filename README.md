@@ -33,6 +33,7 @@ yarn start
 ## Technologies
 
 * [Next.js](https://nextjs.org)
+* [React](https://react.dev/)
 * [i18next](https://www.i18next.com/)
 * [SASS](https://sass-scss.ru)
 * [TypeScript](https://www.typescriptlang.org/)
